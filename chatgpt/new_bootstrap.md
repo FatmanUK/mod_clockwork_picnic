@@ -61,11 +61,11 @@ Assign an appropriate speed and beats-per-minute.
 
 ### 2. Select a solid sample set
 
-Going by names and appropriate web searches, select eight samples from the ST-01 and ST-02 archives which will accomplish the goal and achieve the desired character for the `.mod`. State which samples are to be looped, if any. The user will determine exact loop points and accept or reject samples for looping. Forward loops are the only kind of loops allowed per **ProTracker 2** compatibility rules.
+Select eight samples from the ST-01 and ST-02 archives which will accomplish the goal and achieve the desired character for the `.mod`. State which samples are to be looped, if any. The user will determine exact loop points and accept or reject samples for looping. Forward loops are the only kind of loops allowed per **ProTracker 2** compatibility rules.
 
 Analyse the samples' envelopes and recommend default volume settings for each one. Note recorded peak and envelope behaviour. If you don't have access to the samples, report this lack and the user will upload the samples.
 
-Finetune will also be determined at this point. Since we're using only ST-01 and ST-02 samples, historical finetune values are well established on the web. Find and report them.
+Finetune will also be determined at this point. Since we're using only ST-01 and ST-02 samples, historical finetune values **should be** available on the web. Find and report them for audition by the user. If a historical finetune value isn't found for a sample, make a note for the user to determine the finetune value. The user will report any adjusted finetune values.
 
 Generate note-range maps. Per **PT2** compatibility rules, only octaves 3-5 are allowed. Low-pitched samples should be restricted to octaves 4-5, and high-pitched samples should be restricted to octaves 3-4.
 
@@ -106,7 +106,8 @@ Bonus points if the final `.mod` weighs in at less than 40KB.
 
 ## Arbitrary Guidelines
 
-- Unless otherwise specified or required, output lone numbers in hex format (eg. "3f").
+- All unpitched percussion hits written as note `C-4`.
+- Unless otherwise specified or required, output lone numbers in hex format (eg. `3f`).
 - Explain effects the first time they're used.
 
 ## Tools Used

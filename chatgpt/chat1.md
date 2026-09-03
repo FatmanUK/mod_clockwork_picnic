@@ -77,6 +77,9 @@ Step 1 is therefore complete. Next in the bootstrap is **Step 2: select a solid 
 
 ---
 
+[x] suggest ten possible titles
+[x] assign an appropriate speed and beats-per-minute
+
 Let's proceed with step 2.
 
 ---
@@ -149,7 +152,3 @@ Extract each LHA archive locally and package the resulting directories as, for e
 * `st-02.tar.gz`
 
 Upload those two files and I can extract them here and continue Step 2 with the actual sample data.
-
----
-
-TODO: repack the archives as tarballs.
