@@ -122,8 +122,8 @@ Once you've auditioned them, your accepted volumes, loop decision/points and any
 
 ```
 TODO:
-  [ ] find loop points
-  [ ] finetune samples
+  [x] find loop points
+  [x] finetune samples
   [ ] report back any finetune decisions and loop points
-  [ ] final sample audition
+  [x] final sample audition
 ```

@@ -2,28 +2,40 @@
 title: Clockwork Picnic
 speed: 6
 bpm: 132
+orderList:
+  - 0
 instruments:
   - id: 1
+    #source: st01
+    #name: ST-01/Steinway
+    #volume: 0x30
+    #finetune: 0x1  # 0 or +1
     source: st01
-    name: ST-01/Steinway
-    volume: 0x30
+    name: ST-01/RingPiano
+    volume: 0x10
+    finetune: 0x0  # 0 or +1
+    #source: st02
+    #name: ST-02/Pizza2  # surprisingly good piano sound
+    #finetune: 0x0
   - id: 2
     source: st01
     name: ST-01/PanFlute
-    volume: 0x28
+    volume: 0x10
+    finetune: 0xe  # -2 or -3
     # possibly loop but probably no
   - id: 3
     source: st01
     name: ST-01/SoftBass
-    volume: 0x38
+    volume: 0x40
+    finetune: 0xf
   - id: 4
     source: st01
     name: ST-01/BassDrum3
-    volume: 0x30
+    volume: 0x28
   - id: 5
     source: st01
     name: ST-01/Snare1
-    volume: 0x34
+    volume: 0x2c
   - id: 6
     source: st01
     name: ST-01/CloseHiHat
@@ -32,10 +44,12 @@ instruments:
     source: st01
     name: ST-01/Strings7
     volume: 0x20
-    # loop this
+    finetune: 0x2  # +2 to +4
+    start: 0x00f0
+    length: 0x25bc
   - id: 8
     source: st01
     name: ST-01/PingBells
-    volume: 0x28
+    volume: 0x38
 ...
 # vim: set filetype=yaml
