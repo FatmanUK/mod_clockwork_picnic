@@ -1,4 +1,6 @@
+```
 [x] repack the archives as tarballs
+```
 
 Here are the archives in tarball format.
 
@@ -109,15 +111,19 @@ Once you've auditioned them, your accepted volumes, loop decision/points and any
 
 ---
 
+```
 [x] select eight samples ... which will accomplish the goal and achieve the desired character
 [x] state which samples are to be looped, if any... forward loops are the only kind of loops allowed
 [x] analyse the samples' envelopes and recommend default volume ... note recorded peak and envelope behaviour
 [x] find and report [finetune values] for audition by the user... [or] make a note
 [x] generate note-range maps
 [x] suggest audition criteria
+```
 
+```
 TODO:
   [ ] find loop points
   [ ] finetune samples
   [ ] report back any finetune decisions and loop points
   [ ] final sample audition
+```

@@ -2,6 +2,40 @@
 title: Clockwork Picnic
 speed: 6
 bpm: 132
-instruments: []
+instruments:
+  - id: 1
+    source: st01
+    name: ST-01/Steinway
+    volume: 0x30
+  - id: 2
+    source: st01
+    name: ST-01/PanFlute
+    volume: 0x28
+    # possibly loop but probably no
+  - id: 3
+    source: st01
+    name: ST-01/SoftBass
+    volume: 0x38
+  - id: 4
+    source: st01
+    name: ST-01/BassDrum3
+    volume: 0x30
+  - id: 5
+    source: st01
+    name: ST-01/Snare1
+    volume: 0x34
+  - id: 6
+    source: st01
+    name: ST-01/CloseHiHat
+    volume: 0x40
+  - id: 7
+    source: st01
+    name: ST-01/Strings7
+    volume: 0x20
+    # loop this
+  - id: 8
+    source: st01
+    name: ST-01/PingBells
+    volume: 0x28
 ...
 # vim: set filetype=yaml

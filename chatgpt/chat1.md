@@ -77,8 +77,10 @@ Step 1 is therefore complete. Next in the bootstrap is **Step 2: select a solid 
 
 ---
 
+```
 [x] suggest ten possible titles
 [x] assign an appropriate speed and beats-per-minute
+```
 
 Let's proceed with step 2.
 
