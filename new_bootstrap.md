@@ -61,7 +61,7 @@ Assign an appropriate speed and beats-per-minute.
 
 ### 2. Select a solid sample set
 
-Going by names and appropriate web searches, select eight samples from the ST-01 and ST-02 archives which will accomplish the goal and achieve the desired character for the `.mod`. State which samples are to be looped, if any. The user will determine exact loop points and accept or reject samples for looping. Forward loops are the only kind of loops allowed per **ProTracker 2** compatibility rules.
+Select eight samples from the ST-01 and ST-02 archives which will accomplish the goal and achieve the desired character for the `.mod`. State which samples are to be looped, if any. The user will determine exact loop points and accept or reject samples for looping. Forward loops are the only kind of loops allowed per **ProTracker 2** compatibility rules.
 
 Analyse the samples' envelopes and recommend default volume settings for each one. Note recorded peak and envelope behaviour. If you don't have access to the samples, report this lack and the user will upload the samples.
 
