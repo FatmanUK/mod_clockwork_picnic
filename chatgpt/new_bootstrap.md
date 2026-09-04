@@ -107,7 +107,7 @@ Bonus points if the final `.mod` weighs in at less than 40KB.
 ## Arbitrary Guidelines
 
 - All unpitched percussion hits written as note `C-4`.
-- Unless otherwise specified or required, output lone numbers in hex format (eg. `3f`).
+- Unless otherwise specified or required, output lone numbers in hex format (eg. "3f").
 - Explain effects the first time they're used.
 
 ## Tools Used

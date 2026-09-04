@@ -1,23 +1,5 @@
 # Sample map
 
-## Initial thoughts
-
-Piano: primary melodic voice and the defining instrument of Clockwork Picnic.
-
-Oboe/woodwind substitute: haunting contrasting solo voice for the specified two-pattern feature.
-
-Bass: short, articulate bass suitable for active tracker basslines.
-
-Kick: compact, punchy bass drum.
-
-Snare: crisp snare that remains intelligible against piano.
-
-Hi-hat/percussion: rhythmic subdivision without consuming much sonic space.
-
-Sustained harmonic voice: likely strings or another economical loopable texture.
-
-Character/percussion voice: a distinctive bell, mallet, pluck or similar sound for the little mechanical flourishes implied by Clockwork Picnic.
-
 ## Samples
 
 | Slot | Sample             | Role                      | Size | Default vol. | Loop?       | Practical range |
