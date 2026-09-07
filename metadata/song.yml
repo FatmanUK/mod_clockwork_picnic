@@ -1,28 +1,30 @@
 ---
 title: Clockwork Picnic
+message: 
+                      
+                      
+                      
+ Written with ChatGPT 
+     Instant mode     
+  With interruptions  
+   and interference   
+ by Millie  >^._.^<~9 
 speed: 6
 bpm: 132
 orderList:
   - 0
+  - 1
 instruments:
   - id: 1
-    #source: st01
-    #name: ST-01/Steinway
-    #volume: 0x30
-    #finetune: 0x1  # 0 or +1
-    source: st01
-    name: ST-01/RingPiano
+    source: st02
+    name: ST-02/Pizza2  # surprisingly good piano sound
     volume: 0x10
-    finetune: 0x0  # 0 or +1
-    #source: st02
-    #name: ST-02/Pizza2  # surprisingly good piano sound
-    #finetune: 0x0
+    finetune: 0x0
   - id: 2
     source: st01
     name: ST-01/PanFlute
     volume: 0x10
     finetune: 0xe  # -2 or -3
-    # possibly loop but probably no
   - id: 3
     source: st01
     name: ST-01/SoftBass

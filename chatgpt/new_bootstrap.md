@@ -37,6 +37,7 @@ The intended character of the piece is:
 
 * jaunty, cheerful, engaging game title "attract" tune
 * the main melody instrument should be a piano
+* the piano should sound like a human is playing, so not too fast or staccato
 * there should also be a haunting oboe (or similar woodwind) solo over two patterns
 * heavy on the pattern reuse
 * interesting pattern order list
