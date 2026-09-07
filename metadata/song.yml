@@ -1,14 +1,6 @@
 ---
-title: Clockwork Picnic
-message: 
-                      
-                      
-                      
- Written with ChatGPT 
-     Instant mode     
-  With interruptions  
-   and interference   
- by Millie  >^._.^<~9 
+title: 'Clockwork Picnic'
+message: ' A jaunty piano tune      with wood solo                           Written with ChatGPT      Instant mode       With interruptions     and interference    by Millie  >^._.^<~~ '
 speed: 6
 bpm: 132
 orderList:
@@ -16,42 +8,42 @@ orderList:
   - 1
 instruments:
   - id: 1
-    source: st02
-    name: ST-02/Pizza2  # surprisingly good piano sound
+    source: 'st02'
+    name: 'ST-02/Pizza2'  # surprisingly good piano sound
     volume: 0x10
     finetune: 0x0
   - id: 2
-    source: st01
-    name: ST-01/PanFlute
+    source: 'st01'
+    name: 'ST-01/PanFlute'
     volume: 0x10
     finetune: 0xe  # -2 or -3
   - id: 3
-    source: st01
-    name: ST-01/SoftBass
+    source: 'st01'
+    name: 'ST-01/SoftBass'
     volume: 0x40
     finetune: 0xf
   - id: 4
-    source: st01
-    name: ST-01/BassDrum3
+    source: 'st01'
+    name: 'ST-01/BassDrum3'
     volume: 0x28
   - id: 5
-    source: st01
-    name: ST-01/Snare1
+    source: 'st01'
+    name: 'ST-01/Snare1'
     volume: 0x2c
   - id: 6
-    source: st01
-    name: ST-01/CloseHiHat
+    source: 'st01'
+    name: 'ST-01/CloseHiHat'
     volume: 0x40
   - id: 7
-    source: st01
-    name: ST-01/Strings7
+    source: 'st01'
+    name: 'ST-01/Strings7'
     volume: 0x20
     finetune: 0x2  # +2 to +4
     start: 0x00f0
     length: 0x25bc
   - id: 8
-    source: st01
-    name: ST-01/PingBells
+    source: 'st01'
+    name: 'ST-01/PingBells'
     volume: 0x38
 ...
 # vim: set filetype=yaml
