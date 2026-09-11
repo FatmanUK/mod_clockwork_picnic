@@ -5,7 +5,7 @@ Now the rhythm section joins, but it has to work around the pianist rather than 
 Channel 2 takes hats. Channel 3 combines kick and snare. SoftBass is deliberately **absent** from this first main-theme pattern because Channel 4 is already doing real bass work.
 
 | RR | CH1        | CH2        | CH3        | CH4        |
-| -- | ---------- | ---------- | ---------- | ---------- |
+| -: | ---------- | ---------- | ---------- | ---------- |
 | 00 | C-5 01 --- | --- -- --- | C-4 04 --- | C-3 01 --- |
 | 02 | --- -- --- | C-4 06 --- | --- -- --- | --- -- --- |
 | 04 | E-5 01 --- | --- -- --- | C-4 05 --- | G-3 01 --- |

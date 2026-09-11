@@ -5,7 +5,7 @@ The opening is essentially a two-handed piano performance. It establishes C majo
 `F84` sets BPM `84` hex (132 decimal) on the opening note. (Note this might be different from what's established. Check this.)
 
 | RR | CH1        | CH2        | CH3        | CH4        |
-| -- | ---------- | ---------- | ---------- | ---------- |
+| -: | ---------- | ---------- | ---------- | ---------- |
 | 00 | E-4 01 F84 | --- -- --- | --- -- --- | C-3 01 --- |
 | 04 | G-4 01 --- | --- -- --- | --- -- --- | G-3 01 --- |
 | 08 | C-5 01 --- | --- -- --- | --- -- --- | E-3 01 --- |
