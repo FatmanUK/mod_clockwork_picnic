@@ -1,38 +1,14 @@
-# Pattern 00 — Winding the Clock
+Now you've gone too far the other way. Pattern00 is weirdly spacious and disconnected. The beat sounds weird when it starts.
 
-The opening is essentially a two-handed piano performance. It establishes C major, briefly colours it with A minor and F, and then uses G to prepare the next pattern.
+Pattern01 is much better. Rewrite pattern00 to be paced more like pattern01.
 
-`F84` sets BPM `84` hex (132 decimal) on the opening note.
+---
 
-There are only **20 right-hand piano attacks across the entire pattern**, compared with the barrage in the rejected version. More importantly, the hands now move in recognisable harmonic groups.
+Pattern `01` gives us the calibration point now. So `00` should use roughly the same **4–8 row phrase spacing**, while still functioning as an introduction rather than merely being another main-theme pattern.
 
-Rows `00–0f` form the opening C-major phrase. Rows `10–1f` answer through A minor. Rows `20–2f` move through F. Rows `30–3f` establish G while the percussion quietly arrives. The final G in the left hand deliberately leaves the phrase unresolved so `01` can satisfy it.
+The other problem was the rhythm section appearing as though somebody switched on a drum machine halfway through a piano recital. I'll introduce it progressively but on an already perceptible pulse: hi-hat first, then kick, then snare. That should make the transition into `01` much less peculiar.
 
-# Pattern 00 — Winding the Clock, revised
-
-Solo piano for the first three quarters. The rhythm section merely hints at its arrival near the end.
-
-That's closer to the intended grammar. The right hand has **11 attacks in 64 rows**, not thirty-odd. Some notes get six or eight rows to decay naturally. The left hand supplies broad harmonic gestures instead of behaving like an automated bass sequencer.
-
-The opening phrase now has room to be heard as:
-
-```text
-RH: E-3   G-3      C-4   B-3 A-3
-LH: C-3             G-3
-
-RH: E-3       A-3   C-4       A-3 G-3 F-3   A-3
-LH: A-3       E-3             F-3      C-4
-```
-
-That is much closer to something a pianist might phrase with two hands.
-
-For **Pattern `01`**, I’ll use the same density target but introduce the accompaniment gradually. It should probably contain only about **12–14 right-hand attacks**, with the left hand changing perhaps six to eight times across the entire pattern. The drums can establish a pulse independently in Channels 2/3 rather than forcing the piano onto their grid.
-
-And the octave rule is retroactive: every existing CH1 piano note that survives into the rewritten material comes down exactly one octave. So, for example, old `C-5` becomes `C-4`, `G-5` becomes `G-4`, and `A-4` becomes `A-3`.
-
-This revised `00` is the density benchmark I'll use for the rest of the piano writing.
-
-# Pattern 00 — Winding the Clock, replacement
+### Pattern `00` — Winding the Clock, replacement
 
 | RR | CH1        | CH2        | CH3        | CH4        |
 | -: | ---------- | ---------- | ---------- | ---------- |

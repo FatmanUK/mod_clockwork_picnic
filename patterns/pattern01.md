@@ -16,7 +16,7 @@ For the first audition, I'd compile simply:
 
 The important test is no longer merely whether the samples balance. Listen specifically to whether **Channels 1 and 4 register psychologically as the right and left hands of one pianist**. If that illusion works, we've found the central arranging technique for the whole piece. If it doesn't, there is no point building `02` on top of it.
 
-### Pattern `01` — The Picnic Tune, Phrase A
+# Pattern 01 — The Picnic Tune, Phrase A
 
 The harmonic path is broadly **C → Am → F → G**, with the final G left unresolved so the eventual Pattern `02` has somewhere meaningful to go.
 
