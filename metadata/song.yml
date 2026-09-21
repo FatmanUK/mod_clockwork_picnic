@@ -6,6 +6,7 @@ bpm: 132
 orderList:
   - 0
   - 1
+  - 2
 instruments:
   - id: 1
     source: 'st02'
