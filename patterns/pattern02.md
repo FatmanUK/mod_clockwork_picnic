@@ -1,4 +1,4 @@
-# Pattern 02 — The Picnic Tune, Phrase B
+# Pattern `02` — The Picnic Tune, Phrase B
 
 | RR | CH1        | CH2        | CH3        | CH4        |
 | -: | ---------- | ---------- | ---------- | ---------- |

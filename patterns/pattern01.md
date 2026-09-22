@@ -1,4 +1,4 @@
-# Pattern 01 — The Picnic Tune, Phrase A
+# Pattern `01` — The Picnic Tune, Phrase A
 
 Now the rhythm section joins, but it has to work around the pianist rather than the reverse.
 
