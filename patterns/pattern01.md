@@ -20,29 +20,6 @@ The important test is no longer merely whether the samples balance. Listen speci
 
 The harmonic path is broadly **C → Am → F → G**, with the final G left unresolved so the eventual Pattern `02` has somewhere meaningful to go.
 
-| RR | CH1        | CH2        | CH3        | CH4        |
-| -: | ---------- | ---------- | ---------- | ---------- |
-| 00 | C-4 01 --- | --- -- --- | C-4 04 --- | C-3 01 --- |
-| 04 | --- -- --- | C-4 06 --- | --- -- --- | --- -- --- |
-| 06 | E-4 01 --- | --- -- --- | --- -- --- | --- -- --- |
-| 08 | --- -- --- | --- -- --- | C-4 05 --- | G-3 01 --- |
-| 12 | G-4 01 --- | C-4 06 --- | --- -- --- | --- -- --- |
-| 16 | E-4 01 --- | --- -- --- | C-4 04 --- | C-3 01 --- |
-| 20 | --- -- --- | C-4 06 --- | --- -- --- | --- -- --- |
-| 22 | D-4 01 --- | --- -- --- | --- -- --- | --- -- --- |
-| 24 | --- -- --- | --- -- --- | C-4 05 --- | G-3 01 --- |
-| 28 | C-4 01 --- | C-4 06 --- | --- -- --- | --- -- --- |
-| 32 | E-4 01 --- | --- -- --- | C-4 04 --- | A-3 01 --- |
-| 36 | --- -- --- | C-4 06 --- | --- -- --- | --- -- --- |
-| 40 | A-4 01 --- | --- -- --- | C-4 05 --- | E-3 01 --- |
-| 44 | G-4 01 --- | C-4 06 --- | --- -- --- | --- -- --- |
-| 48 | A-3 01 --- | --- -- --- | C-4 04 --- | F-3 01 --- |
-| 52 | C-4 01 --- | C-4 06 --- | --- -- --- | --- -- --- |
-| 56 | A-3 01 --- | --- -- --- | C-4 05 --- | C-4 01 --- |
-| 58 | G-3 01 --- | --- -- --- | --- -- --- | --- -- --- |
-| 60 | B-3 01 --- | C-4 06 --- | C-4 04 --- | G-3 01 --- |
-| 63 | --- -- --- | --- -- --- | --- -- --- | D-4 01 --- |
-
 This gives CH1 **13 attacks in the whole pattern**. The ordinary spacing is four to eight rows, with only the little `56 → 58 → 60` figure accelerating toward the cadence. That is now an ornament because the surrounding music establishes a slower vocabulary.
 
 The right-hand phrasing breaks down roughly as:
@@ -89,4 +66,41 @@ For review, the current intended sequence is simply:
 00, 01
 ```
 
+## Pattern 01 — The Picnic Tune, Phrase A
+
 These two patterns should now be judged as one continuous opening: `00` establishes the pianist and lets the rhythm section creep in; `01` turns that vocabulary into the first proper theme phrase while retaining the slower, two-handed character.
+
+`ED1` and `ED2` delay a note by one or two ticks. They are used only on selected phrase-opening and cadential chords to create a light low-to-high roll. The pianist is now allowed several fingers, an innovation the instrument industry has apparently supported for centuries.
+
+The low-pass filter remains on through `01–02`. Pattern `03` switches it off with `E01`, giving the second half of the theme a natural lift.
+
+| RR | CH1        | CH2        | CH3        | CH4        |
+| -: | ---------- | ---------- | ---------- | ---------- |
+| 00 | C-4 01 ED2 | E-3 01 ED1 | C-4 04 --- | C-3 01 --- |
+| 04 | --- -- --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 06 | E-4 01 --- | --- -- --- | --- -- --- | --- -- --- |
+| 08 | --- -- --- | B-3 01 --- | C-4 05 --- | G-3 01 --- |
+| 12 | G-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 16 | E-4 01 --- | C-4 01 --- | C-4 04 --- | E-3 01 --- |
+| 20 | --- -- --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 22 | D-4 01 --- | --- -- --- | --- -- --- | --- -- --- |
+| 24 | --- -- --- | B-3 01 --- | C-4 05 --- | G-3 01 --- |
+| 28 | C-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 32 | E-4 01 --- | C-4 01 --- | C-4 04 --- | A-3 01 --- |
+| 36 | --- -- --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 40 | A-4 01 --- | B-3 01 --- | C-4 05 --- | E-3 01 --- |
+| 44 | G-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 48 | A-3 01 ED2 | F-3 01 ED1 | C-4 04 --- | C-3 01 --- |
+| 52 | C-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 56 | A-3 01 --- | F-3 01 --- | C-4 05 --- | C-3 01 --- |
+| 58 | G-3 01 --- | E-3 01 --- | --- -- --- | C-3 01 --- |
+| 60 | B-3 01 --- | G-3 01 --- | C-4 04 --- | D-3 01 --- |
+
+The final two piano groups are:
+
+```text
+row 58: C-E-G
+row 60: D-G-B
+```
+
+So the pattern moves from a complete C-major triad onto a complete G-major triad and deliberately leaves the theme unresolved for `02`.

@@ -34,27 +34,6 @@ This revised `00` is the density benchmark I'll use for the rest of the piano wr
 
 # Pattern 00 — Winding the Clock, replacement
 
-| RR | CH1        | CH2        | CH3        | CH4        |
-| -: | ---------- | ---------- | ---------- | ---------- |
-| 00 | E-3 01 E00 | --- -- --- | --- -- --- | C-3 01 --- |
-| 04 | G-3 01 --- | --- -- --- | --- -- --- | --- -- --- |
-| 08 | E-3 01 --- | --- -- --- | --- -- --- | G-3 01 --- |
-| 12 | C-4 01 --- | --- -- --- | --- -- --- | --- -- --- |
-| 16 | C-3 01 --- | --- -- --- | --- -- --- | A-3 01 --- |
-| 20 | A-3 01 --- | --- -- --- | --- -- --- | --- -- --- |
-| 24 | C-3 01 --- | --- -- --- | --- -- --- | E-3 01 --- |
-| 28 | G-3 01 --- | --- -- --- | --- -- --- | --- -- --- |
-| 32 | A-3 01 --- | --- -- --- | --- -- --- | F-3 01 --- |
-| 36 | C-4 01 --- | C-4 06 --- | --- -- --- | --- -- --- |
-| 40 | A-3 01 --- | C-4 06 --- | --- -- --- | C-4 01 --- |
-| 44 | G-3 01 --- | C-4 06 --- | --- -- --- | --- -- --- |
-| 48 | F-3 01 --- | C-4 06 --- | C-4 04 --- | G-3 01 --- |
-| 52 | A-3 01 --- | C-4 06 --- | --- -- --- | --- -- --- |
-| 56 | B-3 01 --- | C-4 06 --- | C-4 05 --- | D-4 01 --- |
-| 58 | G-3 01 --- | --- -- --- | --- -- --- | --- -- --- |
-| 60 | A-3 01 --- | C-4 06 --- | C-4 04 --- | G-3 01 --- |
-| 62 | B-3 01 --- | C-4 06 --- | --- -- --- | --- -- --- |
-
 This should connect much more naturally to `01`.
 
 The first half now has a clear piano pulse rather than isolated notes floating in space. The phrasing is:
@@ -93,3 +72,67 @@ The revised audition sequence remains:
 ```
 
 This `00` is now much closer to `01` in note density, but still has an introductory trajectory: **piano → pulse → rhythm section → main theme**.
+
+This replacement preserves **every CH1 and CH4 note from your accepted Pattern `00`**, including `E00`. The changes are confined to revoicing:
+
+* CH2 now supplies piano harmony.
+* CH3 acts as a fourth piano voice through row `32`.
+* CH3 becomes the consolidated percussion channel from row `36`.
+* Where a kick or snare occurs, the simultaneous hi-hat from the old arrangement is omitted. One percussion channel remains stubbornly one percussion channel.
+
+## Pattern 00 — Winding the Clock, polyphonic revoicing
+
+| RR | CH1        | CH2        | CH3        | CH4        |
+| -: | ---------- | ---------- | ---------- | ---------- |
+| 00 | E-3 01 E00 | G-3 01 ED1 | C-4 01 ED2 | C-3 01 --- |
+| 04 | G-3 01 --- | --- -- --- | --- -- --- | --- -- --- |
+| 08 | E-3 01 --- | C-3 01 --- | --- -- --- | G-3 01 --- |
+| 12 | C-4 01 --- | E-3 01 --- | G-3 01 --- | --- -- --- |
+| 16 | C-3 01 --- | E-3 01 ED1 | C-4 01 ED2 | A-3 01 --- |
+| 20 | A-3 01 --- | --- -- --- | --- -- --- | --- -- --- |
+| 24 | C-3 01 --- | G-3 01 ED1 | C-4 01 ED2 | E-3 01 --- |
+| 28 | G-3 01 --- | --- -- --- | --- -- --- | --- -- --- |
+| 32 | A-3 01 --- | C-3 01 --- | --- -- --- | F-3 01 --- |
+| 36 | C-4 01 --- | A-3 01 --- | C-4 06 --- | --- -- --- |
+| 40 | A-3 01 --- | F-3 01 --- | C-4 06 --- | C-4 01 --- |
+| 44 | G-3 01 --- | E-3 01 --- | C-4 06 --- | --- -- --- |
+| 48 | F-3 01 --- | B-3 01 --- | C-4 04 --- | G-3 01 --- |
+| 52 | A-3 01 --- | C-4 01 --- | C-4 06 --- | --- -- --- |
+| 56 | B-3 01 --- | G-3 01 --- | C-4 05 --- | D-4 01 --- |
+| 58 | G-3 01 --- | --- -- --- | --- -- --- | --- -- --- |
+| 60 | A-3 01 --- | C-4 01 --- | C-4 04 --- | G-3 01 --- |
+| 62 | B-3 01 --- | D-4 01 --- | C-4 06 --- | --- -- --- |
+
+The opening now establishes fuller piano harmony:
+
+```text
+row 00: C-E-G-C
+row 08: C-E-G
+row 12: E-G-C
+row 16: C-E-A-C
+row 24: C-E-G-C
+row 32: C-F-A
+```
+
+The transition into the rhythm section is also harmonically continuous:
+
+```text
+row 36: F-A-C
+row 40: F-A-C
+row 44: E-G-C
+row 48: G-B-F       G7 shell
+row 52: G-A-C       suspended dominant colour
+row 56: G-B-D
+row 60: G-A-C       suspension returns
+row 62: G-B-D       resolves before Pattern 01
+```
+
+Rows `60–62` therefore create a small dominant suspension and resolution, after which Pattern `01` lands on C. The drums arrive without forcing the piano back into two-note anatomy.
+
+The complete main-theme audition order is now:
+
+```text
+00, 01, 02, 03, 04
+```
+
+Patterns `00–04` should be treated as one revised polyphonic set.
