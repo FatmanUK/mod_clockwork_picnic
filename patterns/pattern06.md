@@ -5,18 +5,15 @@
 | 00 | C-4 01 ED2 | G-3 01 ED1 | C-4 04 --- | C-3 01 --- |
 | 04 | E-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
 | 08 | A-4 01 --- | C-4 01 --- | C-4 05 --- | A-3 01 --- |
-| 10 | --- -- --- | B-4 08 --- | --- -- --- | --- -- --- |
-| 12 | G-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 12 | G-4 01 --- | B-4 08 --- | C-4 06 --- | --- -- --- |
 | 16 | E-4 01 --- | G-3 01 --- | C-4 04 --- | E-3 01 --- |
 | 20 | C-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
 | 24 | F-4 01 --- | A-3 01 --- | C-4 05 --- | F-3 01 --- |
-| 26 | --- -- --- | A-4 08 --- | --- -- --- | --- -- --- |
-| 28 | E-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 28 | E-4 01 --- | A-4 08 --- | C-4 06 --- | --- -- --- |
 | 32 | D-4 01 --- | A-3 01 --- | C-4 04 --- | D-3 01 --- |
 | 36 | F-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
 | 40 | G-4 01 --- | B-3 01 --- | C-4 05 --- | G-3 01 --- |
-| 42 | --- -- --- | B-4 08 --- | --- -- --- | --- -- --- |
-| 44 | D-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 44 | D-4 01 --- | B-4 08 --- | C-4 06 --- | --- -- --- |
 | 48 | E-4 01 --- | G-3 01 --- | C-4 04 --- | C-3 01 --- |
 | 52 | G-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
 | 56 | D-4 01 --- | B-3 01 --- | C-4 05 --- | G-3 01 --- |
@@ -52,3 +49,13 @@ Then check the larger handoff as:
 ```
 
 The crucial test is whether the bells sound like playful replies while the piano still reads as one human performance, rather than four channels competing for custody of the melody.
+
+---
+
+The melody and piano voicing can remain unchanged. The correction is to move each bell onto the next four-row beat, turning it into a clear **beat-four pickup** before the next harmonic phrase.
+
+For both patterns:
+
+* remove the bell-only rows `10`, `26`, and `42`;
+* place those bells on rows `12`, `28`, and `44`;
+* leave every other event unchanged.

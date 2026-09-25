@@ -16,18 +16,15 @@ SoftBass remains out for now. Introducing it here would cost one of the piano vo
 | 00 | E-4 01 ED2 | G-3 01 ED1 | C-4 04 --- | C-3 01 --- |
 | 04 | G-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
 | 08 | E-4 01 --- | B-3 01 --- | C-4 05 --- | G-3 01 --- |
-| 10 | --- -- --- | G-4 08 --- | --- -- --- | --- -- --- |
-| 12 | D-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 12 | D-4 01 --- | G-4 08 --- | C-4 06 --- | --- -- --- |
 | 16 | E-4 01 --- | C-4 01 --- | C-4 04 --- | A-3 01 --- |
 | 20 | A-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
 | 24 | G-4 01 --- | B-3 01 --- | C-4 05 --- | E-3 01 --- |
-| 26 | --- -- --- | B-4 08 --- | --- -- --- | --- -- --- |
-| 28 | E-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 28 | E-4 01 --- | B-4 08 --- | C-4 06 --- | --- -- --- |
 | 32 | F-4 01 ED2 | C-4 01 ED1 | C-4 04 --- | F-3 01 --- |
 | 36 | A-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
 | 40 | F-4 01 --- | A-3 01 --- | C-4 05 --- | D-3 01 --- |
-| 42 | --- -- --- | A-4 08 --- | --- -- --- | --- -- --- |
-| 44 | D-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 44 | D-4 01 --- | A-4 08 --- | C-4 06 --- | --- -- --- |
 | 48 | G-4 01 --- | B-3 01 --- | C-4 04 --- | G-3 01 --- |
 | 52 | D-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
 | 56 | B-3 01 --- | G-3 01 --- | C-4 05 --- | D-3 01 --- |
@@ -50,3 +47,13 @@ CH1  D-4
 ```
 
 That complete G-major triad carries directly into Pattern `06`.
+
+---
+
+The melody and piano voicing can remain unchanged. The correction is to move each bell onto the next four-row beat, turning it into a clear **beat-four pickup** before the next harmonic phrase.
+
+For both patterns:
+
+* remove the bell-only rows `10`, `26`, and `42`;
+* place those bells on rows `12`, `28`, and `44`;
+* leave every other event unchanged.
