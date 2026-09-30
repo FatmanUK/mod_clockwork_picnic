@@ -23,7 +23,8 @@ orderList:
   - 8
   - 9
   - 0xa
-  - 1
+  - 0xb
+  - 0xc
 instruments:
   - id: 1
     source: 'st02'
