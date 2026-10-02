@@ -7,8 +7,9 @@ Err... no, turns out it can't. ChatGPT Instant is great for architecting the pie
 I'll kick it up to Medium to write the patterns.
 
 ## result
+I like it! It doesn't quite live up to the initial spec though.
 
-Pretty good, but doesn't quite live up to the initial spec.
+It's hard to squeeze a polyphonic instrument (eg. piano) into four channels, as a single pianist can deploy ten digits at once, without even considering duets. I can imagine using more instruments to provide two-note samples or whole chords, but I can see that getting very messy. Best avoided.
 
 ### *Jaunty*? You call this *jaunty*?
 Well, no. The first efforts were definitely jaunty. I had to slow the roll considerably to make it believable as a piano piece. We ended up with this. I'd say it's more *chill* than *jaunty*. But I think it's still listenable.

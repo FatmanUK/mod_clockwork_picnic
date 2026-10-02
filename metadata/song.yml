@@ -10,7 +10,7 @@ message: ' A jaunty piano tune      with wood solo     by Adam J Richardson  Wri
 #   and interference   #
 # by Millie  >^._.^<~~ #
 speed: 6
-bpm: 132
+bpm: 145
 orderList:
   - 0
   - 1
@@ -25,6 +25,9 @@ orderList:
   - 0xa
   - 0xb
   - 0xc
+  - 0xd
+  - 0xe
+  - 0xf
 instruments:
   - id: 1
     source: 'st02'
