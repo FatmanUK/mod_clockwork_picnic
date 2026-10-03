@@ -1,14 +1,16 @@
 # Clockwork Picnic — Project Bootstrap
 
 **Project:** Clockwork Picnic  
-**Status:** Bootstrap complete; ready for pattern construction  
+**Status:** All patterns composed, auditioned, and passing; final order list pending  
 **Tracker:** MilkyTracker  
 **Testing platform:** Linux / PikaOS  
 **Target format:** 4-channel ProTracker MOD  
 **Compatibility target:** ProTracker 2  
 **Pattern length:** 64 rows  
 **Baseline speed:** `06`  
-**Baseline BPM:** `84` hex (132 decimal)
+**Baseline BPM:** `84` hex (132 decimal)  
+**Pattern inventory:** `00`–`0f`  
+**Order list:** Pending finalization  
 
 ---
 
@@ -16,29 +18,20 @@
 
 ### Current Goal
 
-Compose an original, highly polished early-1990s Amiga-game-style `.mod` titled **Clockwork Picnic**, using authentic ProTracker 2 constraints, ST-01 samples, four channels, compact pattern reuse, and a definite non-fade coda.
+Assemble the audition-approved patterns into the final order list for **Clockwork Picnic**, compile the complete `.mod`, and verify that the full composition preserves the intended pacing, transitions, ProTracker 2 compatibility, and definite non-looping coda.
 
-The intended character is:
-
-- jaunty, cheerful, engaging game-title / attract-mode music;
-- piano-led;
-- unmistakably tracker-built in rhythm, voicing, pattern reuse, and channel economy;
-- contrasted by a haunting two-pattern PanFlute solo;
-- informed by the spirit of Tim Wright and David Whittaker without imitating a specific piece;
-- approximately 85–105 seconds, although musical flow and authenticity take priority over exact duration.
+The composition is now musically complete at pattern level. The remaining work is arrangement and whole-track validation rather than further pattern writing.
 
 ### Next 3 Steps
 
-1. **Design the first pattern set and reusable pattern roles.**  
-   Translate the structural arc and motif map into a compact initial pattern inventory. Establish which patterns are foundational, which are variants, and which are reserved for the PanFlute feature and coda.
+1. **Finalize the order list.**  
+   Reuse approved patterns deliberately, preserve the intended filter-state transitions, place the two-pattern PanFlute feature at the structural centre, and end with `0d, 0e, 0f`.
 
-2. **Compose and test the opening/main-theme patterns.**  
-   Begin with the “Winding the Clock” material and establish the main RingPiano theme, SoftBass pulse, and core drum vocabulary in compiler-ready 64-row patterns.
+2. **Compile and audition the complete `.mod`.**  
+   Check the entire track in order, with particular attention to repeated-pattern handoffs, filter state, the transition into and out of the PanFlute solo, and the final rallentando.
 
-3. **Develop the contrasting and terminal material.**  
-   Write the two-pattern PanFlute section, then build the reprise and deliberate coda using pattern reuse plus a small number of purpose-built variants.
-
-Do **not** finalize the complete order list before enough musical material exists to judge which patterns genuinely deserve reuse.
+3. **Run final technical QA.**  
+   Confirm order length, runtime, file size, sample metadata, forward-loop behavior, legal note range, supported effects, four-channel integrity, and non-looping playback.
 
 ---
 
@@ -57,6 +50,7 @@ Use this hierarchy whenever records disagree:
 
 2. **This bootstrap file is authoritative** for:
    - project architecture;
+   - accepted pattern rows;
    - pattern roles;
    - order-list intent;
    - note/rhythm/effect structure;
@@ -65,238 +59,162 @@ Use this hierarchy whenever records disagree:
 
 3. **The ST-01/ST-02 archives are sample-file sources only.**
 
-### Core Composition Rules
+### Locked Goal
 
-- 4 channels only.
-- 64 rows per pattern.
-- ProTracker-compatible effects only.
-- No XM-only composition features.
-- Global note range: `C-3` through `B-5`.
-- Low-pitched samples should be restricted to octaves 4–5.
-- High-pitched samples should be restricted to octaves 3–4.
-- Forward sample loops only.
-- No ping-pong loops.
-- Pattern reuse is preferred.
-- The composition must not loop indefinitely.
-- The ending must be a deliberate coda, not a fade-out.
-- Exact final runtime is secondary to musical flow, authenticity, and PT2 compatibility.
-- Bonus objective: final `.mod` under 40 KB, but not at the expense of the music.
-- Unless otherwise required, lone numbers should be written in hex.
-- Explain effects the first time they are used.
+Compose an original, highly polished early-1990s Amiga-game-style `.mod` titled **Clockwork Picnic**, using authentic ProTracker 2 constraints, ST-01 samples, four channels, compact pattern reuse, a human-feeling piano texture, a haunting two-pattern PanFlute feature, and a deliberate non-fade coda.
+
+The intended character is:
+
+- jaunty, cheerful, and suitable for a game title or attract screen;
+- led by a convincingly voiced piano rather than a monophonic tracker lead;
+- unmistakably early-1990s tracker music in construction and channel economy;
+- contrasted by a filtered, haunting woodwind section;
+- informed by the spirit of Tim Wright and David Whittaker without imitating a specific piece;
+- allowed to exceed the original 85–105 second target where musical flow requires it.
+
+### Core Compatibility Rules
+
+```text
+4 channels only
+64 rows per pattern
+ProTracker-compatible effects only
+No XM-only composition features
+No notes below C-3
+No notes above B-5
+Forward sample loops only
+No ping-pong loops
+Pattern reuse preferred
+Composition must have a definite ending
+No fade-out coda
+Exact final runtime is secondary to musical flow
+```
+
+### Pattern Notation Rules
+
+- Row numbers are **decimal**, from `00` through `63`.
+- Entirely empty rows are omitted.
+- Gaps in row numbering represent empty rows.
+- No note: `---`
+- No instrument: `--`
+- No effect: `---`
+- Actual instrument IDs and effect parameters remain hexadecimal.
+- Each pattern uses this Markdown-compatible form:
+
+```text
+| RR | NNN II EEE | NNN II EEE | NNN II EEE | NNN II EEE |
+```
 
 ### Locked Title & Tempo
 
 - **Title:** Clockwork Picnic
 - **Speed:** `06`
 - **BPM:** `84` hex / 132 decimal
+- **Final rallentando:** `F78`, `F70`, `F68`
 
-The title is the thematic seed: **clockwork** suggests interlocking, precise, reusable mechanical figures; **picnic** supplies warmth, cheerfulness, melody, and playfulness.
+The title remains the thematic seed:
+
+- **clockwork** supplies interlocking figures, repeated pattern blocks, filter-state mechanics, and precise accents;
+- **picnic** supplies warmth, cheerfulness, melodic openness, and a deliberately playful piano character.
 
 ### Approved Instrument Set
 
-All eight samples have been auditioned in a test pattern and passed.
+All eight samples have been auditioned and passed.
 
 | ID | Sample | Role | Volume | Finetune | Loop |
 |---:|---|---|---:|---:|---|
-| `01` | `ST-01/RingPiano` | Main piano / principal melody | `10` | `0` | No |
-| `02` | `ST-01/PanFlute` | Haunting woodwind solo | `10` | `e` | No, provisionally |
-| `03` | `ST-01/SoftBass` | Main bass | `40` | `f` | No |
+| `01` | `ST-01/RingPiano` | Principal piano voices | `10` | `0` | No |
+| `02` | `ST-01/PanFlute` | Two-pattern woodwind solo | `10` | `e` | No |
+| `03` | `ST-01/SoftBass` | Selective bass support | `40` | `f` | No |
 | `04` | `ST-01/BassDrum3` | Kick | `28` | — | No |
 | `05` | `ST-01/Snare1` | Snare | `2c` | — | No |
 | `06` | `ST-01/CloseHiHat` | Closed hi-hat | `40` | — | No |
 | `07` | `ST-01/Strings7` | Sustained harmonic bed | `20` | `2` | Yes |
-| `08` | `ST-01/PingBells` | Mechanical sparkle / accents | `38` | — | No |
+| `08` | `ST-01/PingBells` | Beat-aligned metallic accents | `38` | — | No |
 
 #### Finetune Notes
 
-- `RingPiano`: base `0`; `+1` remains an acceptable by-ear alternative.
-- `PanFlute`: base `e` (`-2`); `d` (`-3`) remains an acceptable by-ear alternative.
+- `RingPiano`: base `0`; `+1` remains a by-ear alternative.
+- `PanFlute`: base `e` (`-2`); `d` (`-3`) remains a by-ear alternative.
 - `SoftBass`: `f` (`-1`).
-- `Strings7`: base `2`; values `3`–`4` remain acceptable by-ear alternatives.
-
-#### Strings7 Loop
-
-- Start: `00f0`
-- Length: `25bc`
-- Loop type: forward only
-
-### Practical Pitched Ranges
-
-These are composition ranges, not merely the full playback range supported by the format.
-
-- `01 RingPiano`: `C-3`–`C-5`; main melodic centre around octave 4 into octave 5.
-- `02 PanFlute`: `G-3`–`B-4`; favour the middle of the range for the solo.
-- `03 SoftBass`: `C-4`–`B-5`.
-- `07 Strings7`: `C-3`–`B-4`.
-- `08 PingBells`: `C-3`–`B-4`, usually favouring octave 4 upward.
-
-Percussion should use consistent fixed playback notes once the preferred timbral pitch has been established during pattern writing.
-
----
-
-## Structural Arc
-
-### I. Winding the Clock
-
-A compact opening that assembles the tune piece by piece.
-
-- Begin with a small RingPiano figure and light mechanical percussion.
-- Introduce bass after the initial idea is established.
-- Let the full groove “snap” into place rather than starting with all channels saturated.
-- Establish the clockwork identity before presenting the complete main tune.
-
-### II. The Picnic Sets Off
-
-The full main RingPiano theme.
-
-- Bright, memorable, rhythmically nimble.
-- SoftBass and percussion provide a characteristic bounce.
-- PingBells appear as punctuation, not continuous decoration.
-- This section should contain the material most worth reusing later.
-
-### III. Clockwork Games
-
-Recombine established material.
-
-- Fragment or revoice the RingPiano theme.
-- Reuse bass/drum logic from earlier patterns.
-- Increase the role of PingBells and/or Strings7 selectively.
-- Pattern reuse should become musically audible here rather than merely economical.
-
-### IV. The Strange Little Wood
-
-The required two-pattern PanFlute feature.
-
-- PanFlute becomes the principal melodic voice.
-- Strings7 provides sustained harmonic support.
-- SoftBass supplies restrained movement.
-- Percussion thins out.
-- Pattern 1 of the solo should pose an idea; pattern 2 should develop and resolve it.
-- The harmony may become wistful or ambiguous, but the section must remain recognizably part of Clockwork Picnic.
-
-### V. Back to the Picnic
-
-Return to the established RingPiano material.
-
-- Prefer reuse of earlier patterns over rewriting the whole reprise.
-- Use one or two strategically altered patterns if extra lift is needed.
-- The familiar theme should feel refreshed by the preceding PanFlute contrast.
-
-### VI. The Clock Springs Loose
-
-Purpose-built coda.
-
-- No fade-out.
-- Break the established motifs into shorter fragments.
-- Use piano fragments, bell answers, bass punctuation, and a coordinated final flourish.
-- The ending should sound composed as an ending, not merely stopped.
-
----
-
-## Motif Map
-
-### Motif A — The Picnic Tune
-
-**Voice:** RingPiano
-
-A jaunty, syncopated melodic cell with a clear upward gesture followed by a playful downward answer.
-
-Functions:
-
-- main thematic identity;
-- transposition;
-- fragmentation;
-- rhythmic displacement;
-- reprise material;
-- coda fragments.
-
-### Motif B — The Clockwork Step
-
-**Voices:** SoftBass + BassDrum3
-
-A short alternating bass figure tightly coupled to the kick.
-
-Functions:
-
-- rhythmic engine;
-- creates the “ticking” impression through deliberate gaps;
-- survives beneath multiple melodic patterns;
-- one of the main mechanisms for pattern reuse.
-
-### Motif C — The Cutlery Rattle
-
-**Voices:** CloseHiHat + Snare1
-
-A light, slightly asymmetric percussion figure.
-
-Functions:
-
-- mechanical subdivision;
-- rhythmic bounce;
-- easy variation by omitting hats or shifting occasional snare accents;
-- supports both main-theme and transition material.
-
-### Motif D — The Glint
-
-**Voice:** PingBells
-
-Sparse two- or three-note answering figures.
-
-Functions:
-
-- metallic clockwork punctuation;
-- transition accents;
-- call-and-response with RingPiano;
-- possible coda ingredient.
-
-Use sparingly. It is an accent voice, not a permanent arpeggio layer.
-
-### Motif E — The Long Grass
-
-**Voice:** Strings7
-
-Sustained harmonic support.
-
-Functions:
-
-- bridges between sections;
-- provides continuity while other channels change roles;
-- supports the PanFlute feature;
-- may provide restrained counterlines or held chord tones.
-
-### Motif F — The Woodwind Question
-
-**Voice:** PanFlute
-
-A longer-breathed, more legato melodic idea contrasting with Motif A.
-
-Functions:
-
-- two-pattern haunting solo;
-- should reference the main theme subtly through interval, contour, or transformed rhythm;
-- creates emotional contrast without becoming stylistically detached from the rest of the tune.
-
----
-
-## Channel Architecture
-
-Motifs are **roles**, not simultaneous layers.
-
-Typical main-theme allocation:
-
-- Channel 1: RingPiano
-- Channel 2: RingPiano answering figure or PingBells
-- Channel 3: SoftBass
-- Channel 4: drums
-
-Typical PanFlute-section allocation:
-
-- Channel 1: PanFlute
-- Channel 2: Strings7
-- Channel 3: SoftBass
-- Channel 4: sparse drums
-
-Channel duties may migrate between patterns as required. Arrangement decisions must remain genuinely four-channel rather than being designed as a larger arrangement and stripped down afterward.
+- `Strings7`: base `2`; values `3`–`4` remain by-ear alternatives.
+
+#### Strings7 Forward Loop
+
+```yaml
+start: 0x00f0
+length: 0x25bc
+type: forward
+```
+
+### Accepted Channel Architecture
+
+A tracker channel represents one voice, not one entire hand.
+
+#### Piano-led sections
+
+| Channel | Role |
+|---|---|
+| CH1 | RingPiano top voice / melody |
+| CH2 | RingPiano inner voice; yields occasionally to PingBells |
+| CH3 | Consolidated percussion; temporarily becomes another RingPiano voice at important cadences |
+| CH4 | RingPiano lowest voice / bass anchor |
+
+This supports three- and four-note piano voicings, connected inner lines, broken-chord implications, rolled cadences, and a more plausible human performance.
+
+#### PanFlute section
+
+| Channel | Role |
+|---|---|
+| CH1 | PanFlute |
+| CH2 | Strings7 |
+| CH3 | SoftBass |
+| CH4 | Sparse RingPiano accompaniment |
+
+### Accepted Effect Vocabulary
+
+| Effect | Meaning in this project |
+|---|---|
+| `E00` | Amiga low-pass filter on |
+| `E01` | Amiga low-pass filter off |
+| `ED1` | Delay note by one tick |
+| `ED2` | Delay note by two ticks |
+| `F78` | Set tempo to 120 BPM |
+| `F70` | Set tempo to 112 BPM |
+| `F68` | Set tempo to 104 BPM |
+
+`ED1` and `ED2` are used sparingly to roll selected piano chords upward. They are not a constant humanization effect.
+
+### Structural Arc and Accepted Pattern Roles
+
+| Pattern | Role | Status |
+|---|---|---|
+| `00` | Winding the Clock | Passed |
+| `01–04` | Main piano theme | Passed |
+| `05–06` | Clockwork Games | Passed |
+| `07` | Transition into the Strange Little Wood | Passed |
+| `08–09` | PanFlute question and answer | Passed |
+| `0a` | Transition back to the picnic | Passed |
+| `0b–0c` | Richer piano reprise | Passed |
+| `0d` | Reprise lift | Passed |
+| `0e` | Coda setup / mechanism winds down | Passed |
+| `0f` | Final flourish and rallentando | Passed |
+
+### Filter-State Architecture
+
+```text
+00: filter on with E00
+01–02: filter remains on
+03: filter off with E01
+04–06: filter remains off
+07: filter on at row 32 with E00
+08–09: filter remains on
+0a: filter off at row 32 with E01
+0b–0d: filter remains off
+0e: filter on at row 32 with E00
+0f: filter off at row 00 with E01
+```
+
+Any final order list must preserve sensible entry points into this state machine. Repeated `01–02` after `03` will intentionally sound brighter because the filter is already off.
 
 ---
 
@@ -311,6 +229,7 @@ Clockwork Picnic
 |   +-- ProTracker 2
 |   +-- 4 channels
 |   +-- 64-row patterns
+|   +-- decimal row labels in compiler input
 |   +-- C-3..B-5 global note range
 |   +-- PT-compatible effects only
 |   +-- forward loops only
@@ -327,80 +246,86 @@ Clockwork Picnic
 |   |   +-- PingBells
 |   |
 |   +-- ST-02 archive
-|       +-- available as source material
-|       +-- no currently selected instruments
+|       +-- retained as source material
+|       +-- no selected instruments
 |
 +-- Auditioned Instrument State
-|   +-- volumes
-|   +-- finetunes
-|   +-- Strings7 loop
-|   +-- all 8 samples passed
+|   +-- all 8 sample identities passed
+|   +-- volumes locked
+|   +-- finetunes locked
+|   +-- Strings7 forward loop locked
 |
-+-- Musical Architecture
-|   +-- title / thematic seed
-|   +-- structural arc
-|   +-- motifs A-F
-|   +-- channel-role model
-|   +-- pattern-reuse requirement
++-- Accepted Musical Architecture
+|   +-- three/four-voice piano model
+|   +-- consolidated percussion
+|   +-- beat-aligned bells
+|   +-- filtered woodwind section
+|   +-- final rallentando
 |
-+-- Pattern Construction
-|   +-- compiler row format
-|   +-- first pattern inventory   [NEXT]
-|   +-- opening/main-theme rows   [NEXT]
-|   +-- PanFlute feature          [NEXT]
-|   +-- reprise/coda
-|   +-- final order list
++-- Accepted Patterns
+|   +-- 00 intro
+|   +-- 01-04 main theme
+|   +-- 05-06 games
+|   +-- 07 transition
+|   +-- 08-09 solo
+|   +-- 0a return transition
+|   +-- 0b-0c reprise
+|   +-- 0d lift
+|   +-- 0e-0f coda
+|
++-- Remaining Assembly
+|   +-- final order list          [NEXT]
+|   +-- full MOD compilation      [NEXT]
+|   +-- whole-track audition      [NEXT]
+|   +-- runtime / size / PT2 QA   [NEXT]
 |
 +-- Testing
-    +-- MilkyTracker
     +-- PikaOS
-    +-- compiled .mod
-    +-- by-ear verification
-    +-- PT2 compatibility checks
+    +-- MilkyTracker
+    +-- custom MOD compiler
 ```
 
 ### Version Log
 
 #### Current Consolidated Bootstrap
 
-- Project title locked as **Clockwork Picnic**.
-- Baseline tempo locked at speed `06`, BPM `84`.
-- Eight-sample instrument set selected and auditioned.
-- Auditioned volumes accepted as authoritative.
-- Pitched-sample finetunes established.
-- `Strings7` forward-loop data established.
-- Structural arc completed.
-- Six-motif system completed.
-- Four-channel role architecture established.
-- Complete order list intentionally deferred until enough patterns exist for musically justified reuse.
-- Project is ready to begin pattern construction.
+- Title locked as **Clockwork Picnic**.
+- Baseline speed and tempo locked at `06` / `84`.
+- Eight-sample ST-01 instrument set auditioned and accepted.
+- Instrument volumes, finetunes, and Strings7 loop settings accepted.
+- Piano architecture revised from one channel per hand to three/four independent piano voices.
+- Compiler notation locked to decimal row numbers with omitted empty rows.
+- `E00`, `E01`, `ED1`, `ED2`, and final `Fxx` effects accepted by audition.
+- PingBell timing corrected to the established four-row pulse.
+- Patterns `00`–`0f` composed and auditioned.
+- Every pattern and every designed transition block has passed.
+- Final order list remains the only outstanding musical assembly decision.
 
-This entry represents the current baseline only. Superseded sample choices, rejected settings, and earlier analytical guesses are intentionally omitted.
+Superseded sample choices, rejected pattern drafts, and abandoned channel architectures are intentionally omitted.
 
 ---
 
-## 4. 'Golden' Code Blocks
+## 4. Golden Code Blocks
 
 ### Project Metadata
 
 ```yaml
 project:
   title: Clockwork Picnic
-  status: bootstrap-complete
+  status: patterns-complete-order-pending
   tracker: MilkyTracker
   platform: Linux / PikaOS
   format: ProTracker MOD
   compatibility: ProTracker 2
   channels: 4
   rows_per_pattern: 64
+  row_number_base: decimal
+  omit_empty_rows: true
   speed: 0x06
   bpm: 0x84
-  target_runtime_seconds:
-    min: 85
-    max: 105
-    strict: false
   looping_composition: false
   ending: deliberate-coda
+  highest_pattern: 0x0f
 ```
 
 ### Approved Instruments
@@ -418,7 +343,6 @@ instruments:
     name: ST-01/PanFlute
     volume: 0x10
     finetune: 0xe  # -2 or -3
-    # provisionally unlooped
 
   - id: 3
     source: st01
@@ -448,6 +372,7 @@ instruments:
     finetune: 0x2  # +2 to +4
     start: 0x00f0
     length: 0x25bc
+    loop_type: forward
 
   - id: 8
     source: st01
@@ -455,104 +380,334 @@ instruments:
     volume: 0x38
 ```
 
-### Compatibility Rules
+### Pattern 00 — Winding the Clock
 
-```text
-4 channels only
-64 rows per pattern
-ProTracker-compatible effects only
-No XM-only composition features
-No notes below C-3
-No notes above B-5
-Low-pitched samples: restrict to octaves 4-5
-High-pitched samples: restrict to octaves 3-4
-Forward sample loops only
-No ping-pong loops
-Pattern reuse preferred
-Composition must have a definite ending
-No fade-out coda
-Exact final runtime is not important
-```
+| RR | CH1 | CH2 | CH3 | CH4 |
+| -: | ---------- | ---------- | ---------- | ---------- |
+| 00 | E-3 01 E00 | G-3 01 ED1 | C-4 01 ED2 | C-3 01 --- |
+| 04 | G-3 01 --- | --- -- --- | --- -- --- | --- -- --- |
+| 08 | E-3 01 --- | C-3 01 --- | --- -- --- | G-3 01 --- |
+| 12 | C-4 01 --- | E-3 01 --- | G-3 01 --- | --- -- --- |
+| 16 | C-3 01 --- | E-3 01 ED1 | C-4 01 ED2 | A-3 01 --- |
+| 20 | A-3 01 --- | --- -- --- | --- -- --- | --- -- --- |
+| 24 | C-3 01 --- | G-3 01 ED1 | C-4 01 ED2 | E-3 01 --- |
+| 28 | G-3 01 --- | --- -- --- | --- -- --- | --- -- --- |
+| 32 | A-3 01 --- | C-3 01 --- | --- -- --- | F-3 01 --- |
+| 36 | C-4 01 --- | A-3 01 --- | C-4 06 --- | --- -- --- |
+| 40 | A-3 01 --- | F-3 01 --- | C-4 06 --- | C-4 01 --- |
+| 44 | G-3 01 --- | E-3 01 --- | C-4 06 --- | --- -- --- |
+| 48 | F-3 01 --- | B-3 01 --- | C-4 04 --- | G-3 01 --- |
+| 52 | A-3 01 --- | C-4 01 --- | C-4 06 --- | --- -- --- |
+| 56 | B-3 01 --- | G-3 01 --- | C-4 05 --- | D-4 01 --- |
+| 58 | G-3 01 --- | --- -- --- | --- -- --- | --- -- --- |
+| 60 | A-3 01 --- | C-4 01 --- | C-4 04 --- | G-3 01 --- |
+| 62 | B-3 01 --- | D-4 01 --- | C-4 06 --- | --- -- --- |
 
-### Compiler Pattern-Row Format
+### Pattern 01 — The Picnic Tune, Phrase A
 
-```text
-| RR | NNN II EEE | NNN II EEE | NNN II EEE | NNN II EEE |
-```
+| RR | CH1 | CH2 | CH3 | CH4 |
+| -: | ---------- | ---------- | ---------- | ---------- |
+| 00 | C-4 01 ED2 | E-3 01 ED1 | C-4 04 --- | C-3 01 --- |
+| 04 | --- -- --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 06 | E-4 01 --- | --- -- --- | --- -- --- | --- -- --- |
+| 08 | --- -- --- | B-3 01 --- | C-4 05 --- | G-3 01 --- |
+| 12 | G-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 16 | E-4 01 --- | C-4 01 --- | C-4 04 --- | E-3 01 --- |
+| 20 | --- -- --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 22 | D-4 01 --- | --- -- --- | --- -- --- | --- -- --- |
+| 24 | --- -- --- | B-3 01 --- | C-4 05 --- | G-3 01 --- |
+| 28 | C-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 32 | E-4 01 --- | C-4 01 --- | C-4 04 --- | A-3 01 --- |
+| 36 | --- -- --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 40 | A-4 01 --- | B-3 01 --- | C-4 05 --- | E-3 01 --- |
+| 44 | G-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 48 | A-3 01 ED2 | F-3 01 ED1 | C-4 04 --- | C-3 01 --- |
+| 52 | C-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 56 | A-3 01 --- | F-3 01 --- | C-4 05 --- | C-3 01 --- |
+| 58 | G-3 01 --- | E-3 01 --- | --- -- --- | C-3 01 --- |
+| 60 | B-3 01 --- | G-3 01 --- | C-4 04 --- | D-3 01 --- |
 
-Where:
+### Pattern 02 — The Picnic Tune, Phrase B
 
-- `RR` = row number;
-- `NNN` = note;
-- `II` = instrument slot;
-- `EEE` = effect;
-- each pattern must include a Markdown table header;
-- effects must remain ProTracker-compatible;
-- effects should be explained the first time they are introduced.
+| RR | CH1 | CH2 | CH3 | CH4 |
+| -: | ---------- | ---------- | ---------- | ---------- |
+| 00 | E-4 01 ED2 | G-3 01 ED1 | C-4 01 --- | C-3 01 --- |
+| 04 | G-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 08 | E-4 01 --- | C-4 01 --- | C-4 05 --- | G-3 01 --- |
+| 12 | C-4 01 --- | G-3 01 --- | C-4 06 --- | --- -- --- |
+| 16 | D-4 01 --- | A-3 01 --- | C-4 04 --- | F-3 01 --- |
+| 20 | F-4 01 --- | C-4 01 --- | C-4 06 --- | --- -- --- |
+| 24 | E-4 01 --- | G-3 01 --- | C-4 05 --- | C-3 01 --- |
+| 28 | C-4 01 --- | E-3 01 --- | C-4 06 --- | --- -- --- |
+| 32 | D-4 01 --- | B-3 01 --- | C-4 04 --- | G-3 01 --- |
+| 36 | G-4 01 --- | D-4 01 --- | C-4 06 --- | --- -- --- |
+| 40 | F-4 01 --- | B-3 01 --- | C-4 05 --- | D-3 01 --- |
+| 44 | D-4 01 --- | G-3 01 --- | C-4 06 --- | --- -- --- |
+| 48 | E-4 01 --- | G-3 01 --- | C-4 04 --- | C-3 01 --- |
+| 52 | G-4 01 --- | C-4 01 --- | C-4 06 --- | --- -- --- |
+| 56 | E-4 01 --- | C-4 01 --- | C-4 05 --- | E-3 01 --- |
+| 58 | D-4 01 --- | B-3 01 --- | --- -- --- | G-3 01 --- |
+| 60 | C-4 01 ED2 | G-3 01 ED1 | E-3 01 --- | C-3 01 --- |
 
-### Structural Logic
+### Pattern 03 — Main Theme Development A
 
-```yaml
-structure:
-  - section: winding_the_clock
-    purpose: assemble the groove and introduce the mechanical identity
-    motifs: [B, C, A-fragment, D-optional]
+| RR | CH1 | CH2 | CH3 | CH4 |
+| -: | ---------- | ---------- | ---------- | ---------- |
+| 00 | A-3 01 E01 | F-3 01 --- | C-4 04 --- | C-3 01 --- |
+| 04 | C-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 08 | F-4 01 --- | C-4 01 --- | C-4 05 --- | F-3 01 --- |
+| 12 | E-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 16 | D-4 01 --- | F-3 01 --- | C-4 04 --- | D-3 01 --- |
+| 20 | F-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 24 | A-4 01 --- | F-3 01 --- | C-4 05 --- | D-3 01 --- |
+| 28 | F-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 32 | G-4 01 --- | B-3 01 --- | C-4 04 --- | G-3 01 --- |
+| 36 | D-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 40 | B-3 01 --- | G-3 01 --- | C-4 05 --- | D-3 01 --- |
+| 44 | D-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 48 | E-4 01 --- | G-3 01 --- | C-4 04 --- | C-3 01 --- |
+| 52 | G-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 56 | E-4 01 --- | C-4 01 --- | C-4 05 --- | G-3 01 --- |
+| 60 | D-4 01 --- | B-3 01 --- | C-4 04 --- | G-3 01 --- |
 
-  - section: picnic_sets_off
-    purpose: establish the full main theme
-    motifs: [A, B, C, D-occasional]
+### Pattern 04 — Main Theme Development B
 
-  - section: clockwork_games
-    purpose: recombine familiar material and make reuse audible
-    motifs: [A-fragments, B, C, D, E-optional]
+| RR | CH1 | CH2 | CH3 | CH4 |
+| -: | ---------- | ---------- | ---------- | ---------- |
+| 00 | C-4 01 ED2 | A-3 01 ED1 | C-4 04 --- | E-3 01 --- |
+| 04 | E-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 08 | A-4 01 --- | C-4 01 --- | C-4 05 --- | A-3 01 --- |
+| 12 | G-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 16 | F-4 01 --- | A-3 01 --- | C-4 04 --- | F-3 01 --- |
+| 20 | A-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 24 | C-4 01 --- | F-3 01 --- | C-4 05 --- | C-3 01 --- |
+| 28 | E-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 32 | D-4 01 --- | B-3 01 --- | C-4 04 --- | G-3 01 --- |
+| 36 | G-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 40 | F-4 01 --- | B-3 01 --- | C-4 05 --- | D-3 01 --- |
+| 44 | D-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 48 | E-4 01 --- | G-3 01 --- | C-4 04 --- | C-3 01 --- |
+| 52 | G-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 56 | C-4 01 --- | G-3 01 --- | C-4 05 --- | E-3 01 --- |
+| 58 | B-3 01 --- | G-3 01 --- | --- -- --- | D-3 01 --- |
+| 60 | C-4 01 ED2 | G-3 01 ED1 | E-3 01 --- | C-3 01 --- |
 
-  - section: strange_little_wood
-    purpose: two-pattern haunting PanFlute contrast
-    motifs: [F, E, B-restrained, C-sparse]
+### Pattern 05 — Clockwork Games A
 
-  - section: back_to_the_picnic
-    purpose: reprise established material with minimal new patterns
-    motifs: [A, B, C, D]
+| RR | CH1 | CH2 | CH3 | CH4 |
+| -: | ---------- | ---------- | ---------- | ---------- |
+| 00 | E-4 01 ED2 | G-3 01 ED1 | C-4 04 --- | C-3 01 --- |
+| 04 | G-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 08 | E-4 01 --- | B-3 01 --- | C-4 05 --- | G-3 01 --- |
+| 12 | D-4 01 --- | G-4 08 --- | C-4 06 --- | --- -- --- |
+| 16 | E-4 01 --- | C-4 01 --- | C-4 04 --- | A-3 01 --- |
+| 20 | A-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 24 | G-4 01 --- | B-3 01 --- | C-4 05 --- | E-3 01 --- |
+| 28 | E-4 01 --- | B-4 08 --- | C-4 06 --- | --- -- --- |
+| 32 | F-4 01 ED2 | C-4 01 ED1 | C-4 04 --- | F-3 01 --- |
+| 36 | A-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 40 | F-4 01 --- | A-3 01 --- | C-4 05 --- | D-3 01 --- |
+| 44 | D-4 01 --- | A-4 08 --- | C-4 06 --- | --- -- --- |
+| 48 | G-4 01 --- | B-3 01 --- | C-4 04 --- | G-3 01 --- |
+| 52 | D-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 56 | B-3 01 --- | G-3 01 --- | C-4 05 --- | D-3 01 --- |
+| 60 | D-4 01 --- | B-3 01 --- | C-4 06 --- | G-3 01 --- |
 
-  - section: clock_springs_loose
-    purpose: deliberate non-fade coda
-    motifs: [A-fragments, B-fragments, D, final-ensemble-gesture]
-```
+### Pattern 06 — Clockwork Games B
 
-### Motif Roles
+| RR | CH1 | CH2 | CH3 | CH4 |
+| -: | ---------- | ---------- | ---------- | ---------- |
+| 00 | C-4 01 ED2 | G-3 01 ED1 | C-4 04 --- | C-3 01 --- |
+| 04 | E-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 08 | A-4 01 --- | C-4 01 --- | C-4 05 --- | A-3 01 --- |
+| 12 | G-4 01 --- | B-4 08 --- | C-4 06 --- | --- -- --- |
+| 16 | E-4 01 --- | G-3 01 --- | C-4 04 --- | E-3 01 --- |
+| 20 | C-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 24 | F-4 01 --- | A-3 01 --- | C-4 05 --- | F-3 01 --- |
+| 28 | E-4 01 --- | A-4 08 --- | C-4 06 --- | --- -- --- |
+| 32 | D-4 01 --- | A-3 01 --- | C-4 04 --- | D-3 01 --- |
+| 36 | F-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 40 | G-4 01 --- | B-3 01 --- | C-4 05 --- | G-3 01 --- |
+| 44 | D-4 01 --- | B-4 08 --- | C-4 06 --- | --- -- --- |
+| 48 | E-4 01 --- | G-3 01 --- | C-4 04 --- | C-3 01 --- |
+| 52 | G-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 56 | D-4 01 --- | B-3 01 --- | C-4 05 --- | G-3 01 --- |
+| 58 | B-3 01 --- | G-3 01 --- | --- -- --- | D-3 01 --- |
+| 60 | C-4 01 ED2 | E-3 01 ED1 | G-3 01 --- | C-3 01 --- |
 
-```yaml
-motifs:
-  A:
-    name: The Picnic Tune
-    primary_voice: RingPiano
-    role: main melodic DNA
+### Pattern 07 — Into the Strange Little Wood
 
-  B:
-    name: The Clockwork Step
-    voices: [SoftBass, BassDrum3]
-    role: bass-kick pulse and reuse anchor
+| RR | CH1 | CH2 | CH3 | CH4 |
+| -: | ---------- | ---------- | ---------- | ---------- |
+| 00 | E-4 01 --- | G-3 01 --- | C-4 04 --- | C-3 01 --- |
+| 04 | G-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 08 | E-4 01 --- | C-4 01 --- | C-4 05 --- | G-3 01 --- |
+| 12 | C-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 16 | E-4 01 --- | C-4 01 --- | C-4 04 --- | A-3 01 --- |
+| 20 | C-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 24 | A-3 01 --- | C-4 01 --- | C-4 05 --- | E-3 01 --- |
+| 28 | C-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 32 | F-4 01 --- | A-3 07 E00 | D-4 03 --- | D-3 01 --- |
+| 40 | E-4 01 --- | F-3 07 --- | A-4 03 --- | A-3 01 --- |
+| 48 | D-4 01 --- | B-3 07 --- | E-4 03 --- | E-3 01 --- |
+| 56 | B-3 01 --- | G#3 07 --- | B-4 03 --- | --- -- --- |
+| 60 | G#3 01 --- | --- -- --- | --- -- --- | --- -- --- |
 
-  C:
-    name: The Cutlery Rattle
-    voices: [CloseHiHat, Snare1]
-    role: light asymmetric mechanical percussion
+### Pattern 08 — The Woodwind Question
 
-  D:
-    name: The Glint
-    primary_voice: PingBells
-    role: sparse metallic answering accents
+| RR | CH1 | CH2 | CH3 | CH4 |
+| -: | ---------- | ---------- | ---------- | ---------- |
+| 00 | A-3 02 --- | C-4 07 --- | A-4 03 --- | E-3 01 --- |
+| 08 | C-4 02 --- | --- -- --- | --- -- --- | A-3 01 --- |
+| 16 | E-4 02 --- | A-3 07 --- | F-4 03 --- | F-3 01 --- |
+| 24 | D-4 02 --- | --- -- --- | --- -- --- | C-4 01 --- |
+| 32 | F-4 02 --- | A-3 07 --- | D-4 03 --- | D-3 01 --- |
+| 40 | E-4 02 --- | --- -- --- | --- -- --- | A-3 01 --- |
+| 48 | D-4 02 --- | B-3 07 --- | E-4 03 --- | E-3 01 --- |
+| 56 | B-3 02 --- | G#3 07 --- | B-4 03 --- | --- -- --- |
+| 60 | G#3 02 --- | --- -- --- | --- -- --- | --- -- --- |
 
-  E:
-    name: The Long Grass
-    primary_voice: Strings7
-    role: sustained harmonic bed and transition support
+### Pattern 09 — The Woodwind Answer
 
-  F:
-    name: The Woodwind Question
-    primary_voice: PanFlute
-    role: two-pattern legato contrast derived subtly from main-theme DNA
-```
+| RR | CH1 | CH2 | CH3 | CH4 |
+| -: | ---------- | ---------- | ---------- | ---------- |
+| 00 | A-3 02 --- | C-4 07 --- | A-4 03 --- | E-3 01 --- |
+| 08 | C-4 02 --- | --- -- --- | --- -- --- | A-3 01 --- |
+| 16 | E-4 02 --- | G-3 07 --- | C-5 03 --- | C-4 01 --- |
+| 24 | G-4 02 --- | --- -- --- | --- -- --- | G-3 01 --- |
+| 32 | A-4 02 --- | C-4 07 --- | F-4 03 --- | F-3 01 --- |
+| 40 | G-4 02 --- | --- -- --- | --- -- --- | C-4 01 --- |
+| 48 | F-4 02 --- | A-3 07 --- | D-4 03 --- | D-3 01 --- |
+| 52 | E-4 02 --- | G#3 07 --- | B-4 03 --- | E-3 01 --- |
+| 56 | B-3 02 --- | D-4 07 --- | E-4 03 --- | --- -- --- |
+| 60 | A-3 02 --- | C-4 07 --- | A-4 03 --- | E-3 01 --- |
+
+### Pattern 0a — Back to the Picnic
+
+| RR | CH1 | CH2 | CH3 | CH4 |
+| -: | ---------- | ---------- | ---------- | ---------- |
+| 00 | E-4 02 --- | C-4 07 --- | A-4 03 --- | A-3 01 --- |
+| 08 | C-4 02 --- | --- -- --- | --- -- --- | E-3 01 --- |
+| 16 | A-3 02 --- | C-4 07 --- | F-4 03 --- | F-3 01 --- |
+| 24 | D-4 02 --- | B-3 07 --- | G-4 03 --- | G-3 01 --- |
+| 28 | B-3 02 --- | --- -- --- | --- -- --- | --- -- --- |
+| 32 | E-4 01 ED2 | G-3 01 ED1 | C-4 06 --- | C-3 01 E01 |
+| 36 | G-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 40 | E-4 01 --- | C-4 01 --- | C-4 06 --- | G-3 01 --- |
+| 44 | C-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 48 | D-4 01 --- | B-3 01 --- | C-4 04 --- | G-3 01 --- |
+| 52 | G-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 56 | F-4 01 --- | B-3 01 --- | C-4 05 --- | G-3 01 --- |
+| 60 | D-4 01 --- | B-3 01 --- | C-4 04 --- | G-3 01 --- |
+| 62 | --- -- --- | --- -- --- | C-4 06 --- | --- -- --- |
+
+### Pattern 0b — Piano Reprise A
+
+| RR | CH1 | CH2 | CH3 | CH4 |
+| -: | ---------- | ---------- | ---------- | ---------- |
+| 00 | C-4 01 ED2 | G-3 01 ED1 | E-3 01 --- | C-3 01 --- |
+| 04 | --- -- --- | A-3 01 --- | C-4 06 --- | --- -- --- |
+| 06 | E-4 01 --- | --- -- --- | --- -- --- | --- -- --- |
+| 08 | --- -- --- | B-3 01 --- | C-4 05 --- | G-3 01 --- |
+| 12 | G-4 01 --- | C-4 01 --- | C-4 06 --- | --- -- --- |
+| 16 | E-4 01 --- | C-4 01 --- | C-4 04 --- | E-3 01 --- |
+| 20 | --- -- --- | B-3 01 --- | C-4 06 --- | --- -- --- |
+| 22 | D-4 01 --- | --- -- --- | --- -- --- | --- -- --- |
+| 24 | --- -- --- | B-3 01 --- | C-4 05 --- | G-3 01 --- |
+| 28 | C-4 01 --- | G-3 01 --- | C-4 06 --- | --- -- --- |
+| 32 | E-4 01 --- | C-4 01 --- | C-4 04 --- | A-3 01 --- |
+| 36 | --- -- --- | B-3 01 --- | C-4 06 --- | --- -- --- |
+| 40 | A-4 01 --- | C-4 01 --- | C-4 05 --- | E-3 01 --- |
+| 44 | G-4 01 --- | B-3 01 --- | C-4 06 --- | --- -- --- |
+| 48 | A-3 01 ED2 | F-3 01 ED1 | C-4 04 --- | C-3 01 --- |
+| 52 | C-4 01 --- | A-3 01 --- | F-3 01 --- | C-3 01 --- |
+| 56 | A-3 01 --- | F-3 01 --- | C-4 05 --- | C-3 01 --- |
+| 58 | G-3 01 --- | E-3 01 --- | --- -- --- | C-3 01 --- |
+| 60 | B-3 01 --- | G-3 01 --- | C-4 04 --- | D-3 01 --- |
+
+### Pattern 0c — Piano Reprise B
+
+| RR | CH1 | CH2 | CH3 | CH4 |
+| -: | ---------- | ---------- | ---------- | ---------- |
+| 00 | E-4 01 ED2 | G-3 01 ED1 | C-4 01 --- | C-3 01 --- |
+| 04 | G-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 08 | E-4 01 --- | C-4 01 --- | C-4 05 --- | G-3 01 --- |
+| 12 | C-4 01 --- | G-3 01 --- | C-4 06 --- | --- -- --- |
+| 16 | D-4 01 --- | A-3 01 --- | C-4 04 --- | F-3 01 --- |
+| 20 | F-4 01 --- | C-4 01 --- | C-4 06 --- | --- -- --- |
+| 24 | E-4 01 --- | G-3 01 --- | C-4 05 --- | C-3 01 --- |
+| 28 | C-4 01 --- | E-3 01 --- | C-4 06 --- | --- -- --- |
+| 32 | D-4 01 --- | B-3 01 --- | C-4 04 --- | G-3 01 --- |
+| 36 | G-4 01 --- | D-4 01 --- | C-4 06 --- | --- -- --- |
+| 40 | F-4 01 --- | B-3 01 --- | C-4 05 --- | D-3 01 --- |
+| 44 | D-4 01 --- | G-3 01 --- | C-4 06 --- | --- -- --- |
+| 48 | E-4 01 --- | G-3 01 --- | C-4 04 --- | C-3 01 --- |
+| 52 | G-4 01 --- | C-4 01 --- | C-4 06 --- | --- -- --- |
+| 56 | E-4 01 --- | C-4 01 --- | C-4 05 --- | E-3 01 --- |
+| 58 | D-4 01 --- | B-3 01 --- | --- -- --- | G-3 01 --- |
+| 60 | C-4 01 ED2 | G-3 01 ED1 | E-3 01 --- | C-3 01 --- |
+
+### Pattern 0d — Piano Reprise Lift
+
+| RR | CH1 | CH2 | CH3 | CH4 |
+| -: | ---------- | ---------- | ---------- | ---------- |
+| 00 | G-4 01 --- | E-4 01 --- | C-4 04 --- | C-3 01 --- |
+| 04 | E-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 08 | C-4 01 --- | G-3 01 --- | C-4 05 --- | E-3 01 --- |
+| 12 | D-4 01 --- | G-4 08 --- | C-4 06 --- | --- -- --- |
+| 16 | A-4 01 --- | C-4 01 --- | C-4 04 --- | F-3 01 --- |
+| 20 | G-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 24 | F-4 01 --- | A-3 01 --- | C-4 05 --- | D-3 01 --- |
+| 28 | D-4 01 --- | A-4 08 --- | C-4 06 --- | --- -- --- |
+| 32 | E-4 01 --- | C-4 01 --- | C-4 04 --- | A-3 01 --- |
+| 36 | C-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 40 | F-4 01 --- | A-3 01 --- | C-4 05 --- | F-3 01 --- |
+| 44 | E-4 01 --- | G-4 08 --- | C-4 06 --- | --- -- --- |
+| 48 | D-4 01 --- | B-3 01 --- | C-4 04 --- | G-3 01 --- |
+| 52 | G-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 56 | F-4 01 --- | B-3 01 --- | C-4 05 --- | D-3 01 --- |
+| 60 | D-4 01 --- | B-3 01 --- | F-3 01 --- | G-3 01 --- |
+
+### Pattern 0e — The Clockwork Winds Down
+
+| RR | CH1 | CH2 | CH3 | CH4 |
+| -: | ---------- | ---------- | ---------- | ---------- |
+| 00 | C-4 01 ED2 | G-3 01 ED1 | C-4 04 --- | C-3 01 --- |
+| 04 | E-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 08 | G-4 01 --- | C-4 01 --- | C-4 05 --- | E-3 01 --- |
+| 12 | E-4 01 --- | G-4 08 --- | C-4 06 --- | --- -- --- |
+| 16 | A-3 01 --- | F-3 01 --- | C-4 04 --- | C-3 01 --- |
+| 20 | C-4 01 --- | --- -- --- | C-4 06 --- | --- -- --- |
+| 24 | D-4 01 --- | B-3 01 --- | C-4 05 --- | G-3 01 --- |
+| 28 | B-3 01 --- | G-4 08 --- | C-4 06 --- | D-4 01 --- |
+| 32 | E-4 01 E00 | C-4 07 --- | C-4 03 --- | C-3 01 --- |
+| 40 | C-4 01 --- | A-3 07 --- | F-4 03 --- | F-3 01 --- |
+| 48 | B-3 01 --- | D-4 07 --- | G-4 03 --- | G-3 01 --- |
+| 56 | F-4 01 --- | B-3 07 --- | G-4 03 --- | D-3 01 --- |
+| 60 | D-4 01 --- | B-3 07 --- | G-4 03 --- | G-3 01 --- |
+
+### Pattern 0f — The Clock Springs Loose
+
+| RR | CH1 | CH2 | CH3 | CH4 |
+| -: | ---------- | ---------- | ---------- | ---------- |
+| 00 | E-4 01 E01 | G-3 01 --- | C-4 04 --- | C-3 01 --- |
+| 04 | G-4 01 --- | C-4 01 --- | C-4 06 --- | --- -- --- |
+| 08 | C-5 01 --- | E-4 01 --- | C-4 05 --- | E-3 01 --- |
+| 12 | G-4 01 --- | E-4 08 --- | C-4 06 --- | G-3 01 --- |
+| 16 | A-4 01 --- | C-4 01 --- | C-4 04 --- | F-3 01 --- |
+| 20 | F-4 01 --- | A-3 01 --- | C-4 06 --- | C-4 01 --- |
+| 24 | D-4 01 --- | A-3 01 --- | C-4 05 --- | D-3 01 --- |
+| 28 | G-4 01 --- | B-4 08 --- | C-4 06 --- | G-3 01 --- |
+| 32 | E-4 01 --- | C-4 01 --- | G-3 01 --- | C-3 01 --- |
+| 36 | G-4 01 --- | E-4 01 --- | C-4 01 --- | E-3 01 --- |
+| 40 | A-4 01 --- | F-4 01 --- | C-4 01 --- | F-3 01 --- |
+| 44 | E-4 01 --- | C-4 01 --- | G-3 01 --- | C-3 01 --- |
+| 46 | F-4 01 --- | --- -- --- | --- -- --- | --- -- --- |
+| 48 | G-4 01 F78 | B-3 01 --- | F-3 01 --- | G-3 01 --- |
+| 50 | A-4 01 --- | --- -- --- | --- -- --- | --- -- --- |
+| 52 | C-5 01 F70 | D-4 01 --- | G-3 01 --- | D-3 01 --- |
+| 54 | B-4 01 --- | --- -- --- | --- -- --- | --- -- --- |
+| 56 | C-5 01 ED2 | E-4 01 ED1 | G-3 01 --- | C-3 01 F68 |
 
 ---
 
@@ -560,38 +715,47 @@ motifs:
 
 ### Passed
 
-- [x] Project title selected and locked.
-- [x] Baseline speed and BPM selected.
-- [x] Eight final sample identities selected.
-- [x] All eight samples auditioned in a test pattern.
-- [x] All eight samples passed audition.
-- [x] Auditioned default volumes established.
-- [x] Pitched-sample finetunes established.
-- [x] `Strings7` forward-loop start and length established.
-- [x] Structural arc completed.
-- [x] Motif map completed.
-- [x] Four-channel arrangement model established.
-- [x] PT2 compatibility constraints retained.
-- [x] Compiler row format retained.
+- [x] Project title and thematic identity.
+- [x] Baseline speed and BPM.
+- [x] Eight final sample identities.
+- [x] Auditioned sample volumes.
+- [x] Pitched-sample finetunes.
+- [x] Strings7 forward-loop start and length.
+- [x] Decimal compiler row notation.
+- [x] Omission of entirely empty rows.
+- [x] Three/four-voice piano architecture.
+- [x] Consolidated percussion architecture.
+- [x] Beat-aligned PingBell timing.
+- [x] Filter-on and filter-off transitions.
+- [x] Rolled piano voicings using `ED1` and `ED2`.
+- [x] Main piano theme, Patterns `01–04`.
+- [x] Clockwork Games, Patterns `05–06`.
+- [x] Transition into the woodwind section, Pattern `07`.
+- [x] Two-pattern PanFlute solo, Patterns `08–09`.
+- [x] Transition back, Pattern `0a`.
+- [x] Piano reprise, Patterns `0b–0c`.
+- [x] Reprise lift, Pattern `0d`.
+- [x] Coda setup, Pattern `0e`.
+- [x] Final flourish and rallentando, Pattern `0f`.
+- [x] All individual pattern auditions.
+- [x] All requested paired and sectional auditions.
+- [x] Definite non-fade ending at pattern level.
 
 ### Not Yet Tested
 
-- [ ] Actual composed pattern rows.
-- [ ] Pattern-to-pattern transitions.
-- [ ] Main-theme melodic contour in context.
-- [ ] Two-pattern PanFlute solo in context.
 - [ ] Final order list.
-- [ ] Coda execution.
+- [ ] Complete order-list audition from beginning to end.
 - [ ] Full compiled `.mod`.
-- [ ] Final runtime.
-- [ ] Final ProTracker compatibility pass.
+- [ ] Exact final runtime.
 - [ ] Final file size.
+- [ ] Full ProTracker 2 compatibility pass on the assembled module.
+- [ ] Playback-stop behavior after the final order entry.
 
 ### Current Status
 
-**Bootstrap stage: PASSING.**
+**Pattern-composition stage: PASSING.**
 
-The sample set and project architecture are accepted and stable enough to begin composition. No composed pattern data has yet been declared tested or passing.
+All patterns `00`–`0f` are authoritative and audition-approved. The project is ready for final order-list assembly.
 
 ---
 
@@ -599,13 +763,6 @@ The sample set and project architecture are accepted and stable enough to begin 
 
 - **Testing OS:** PikaOS
 - **Testing tracker:** MilkyTracker
-- **Pattern entry:** not entered directly into MilkyTracker
-- **Build path:** patterns are written in the compiler's Markdown-compatible row format and compiled into the final `.mod`
+- **Pattern entry:** custom Markdown-compatible pattern compiler
+- **Build path:** accepted pattern tables compile into the final `.mod`
 
-The compiler requires each row in this form:
-
-```text
-| RR | NNN II EEE | NNN II EEE | NNN II EEE | NNN II EEE |
-```
-
-Each pattern should therefore be emitted as a Markdown table with an appropriate header.
