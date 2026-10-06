@@ -1,7 +1,7 @@
-# Clockwork Picnic — Project Bootstrap
+# Clockwork Picnic - Final Project Bootstrap
 
 **Project:** Clockwork Picnic  
-**Status:** All patterns composed, auditioned, and passing; final order list pending  
+**Status:** Complete; final build compiled, fully auditioned, and passing  
 **Tracker:** MilkyTracker  
 **Testing platform:** Linux / PikaOS  
 **Target format:** 4-channel ProTracker MOD  
@@ -9,8 +9,12 @@
 **Pattern length:** 64 rows  
 **Baseline speed:** `06`  
 **Baseline BPM:** `84` hex (132 decimal)  
-**Pattern inventory:** `00`–`0f`  
-**Order list:** Pending finalization  
+**Pattern inventory:** `00`-`0f`  
+**Order length:** `16` hex (22 positions)  
+**Final order position:** `15` hex  
+**Exact runtime:** `02:26` (146 seconds)  
+**Final file size:** `59.07 kB`  
+**Final audition:** Passed on multiple sound systems  
 
 ---
 
@@ -18,20 +22,22 @@
 
 ### Current Goal
 
-Assemble the audition-approved patterns into the final order list for **Clockwork Picnic**, compile the complete `.mod`, and verify that the full composition preserves the intended pacing, transitions, ProTracker 2 compatibility, and definite non-looping coda.
+Preserve the final authoritative state of **Clockwork Picnic** for release, reconstruction, and future reference.
 
-The composition is now musically complete at pattern level. The remaining work is arrangement and whole-track validation rather than further pattern writing.
+The musical work is complete. All patterns have passed, the final order list has compiled successfully, and the complete module has been auditioned on multiple sound systems. No composition, arrangement, or mix changes remain outstanding.
 
 ### Next 3 Steps
 
-1. **Finalize the order list.**  
-   Reuse approved patterns deliberately, preserve the intended filter-state transitions, place the two-pattern PanFlute feature at the structural centre, and end with `0d, 0e, 0f`.
+These are post-completion archival steps rather than unfinished production work:
 
-2. **Compile and audition the complete `.mod`.**  
-   Check the entire track in order, with particular attention to repeated-pattern handoffs, filter state, the transition into and out of the PanFlute solo, and the final rallentando.
+1. **Freeze the final build and source.**  
+   Keep the accepted `.mod`, compiler input, this bootstrap, and the exact ST-01 sample files together as one immutable release set.
 
-3. **Run final technical QA.**  
-   Confirm order length, runtime, file size, sample metadata, forward-loop behavior, legal note range, supported effects, four-channel integrity, and non-looping playback.
+2. **Record checksums and backups.**  
+   Generate checksums for the final `.mod`, bootstrap, compiler source, and sample inputs, then retain at least two independent copies.
+
+3. **Tag the release.**  
+   Assign a final version or release tag and distribute the compiled module without further musical edits unless a genuine defect is discovered. The traditional post-release urge to adjust one harmless note is not, regrettably, a genuine defect.
 
 ---
 
@@ -41,36 +47,55 @@ The composition is now musically complete at pattern level. The remaining work i
 
 Use this hierarchy whenever records disagree:
 
-1. **Auditioned project files/settings are authoritative** for:
-   - exact sample loop points;
-   - exact sample volumes;
-   - exact per-row volume edits;
-   - exact finetune values;
-   - any final by-ear edits.
+1. **The final compiled and auditioned `.mod` is authoritative** for:
+   - actual playback;
+   - final order-list behavior;
+   - audible filter state;
+   - exact runtime;
+   - final file size;
+   - the accepted complete-track result.
 
-2. **This bootstrap file is authoritative** for:
+2. **The accepted compiler source and this bootstrap are authoritative** for:
+   - pattern rows;
    - project architecture;
-   - accepted pattern rows;
-   - pattern roles;
-   - order-list intent;
-   - note/rhythm/effect structure;
-   - final sample identities;
+   - instrument assignments;
+   - sample volumes and finetunes;
+   - loop settings;
+   - order-list structure;
+   - effect usage;
    - tested status.
 
 3. **The ST-01/ST-02 archives are sample-file sources only.**
 
-### Locked Goal
+### Completed Outcome
 
-Compose an original, highly polished early-1990s Amiga-game-style `.mod` titled **Clockwork Picnic**, using authentic ProTracker 2 constraints, ST-01 samples, four channels, compact pattern reuse, a human-feeling piano texture, a haunting two-pattern PanFlute feature, and a deliberate non-fade coda.
+**Clockwork Picnic** is an original early-1990s Amiga-game-style `.mod` built under ProTracker 2 constraints with:
 
-The intended character is:
+- four channels;
+- authentic ST-01 samples;
+- a human-feeling, three- and four-voice piano texture;
+- compact but audible pattern reuse;
+- a filtered two-pattern PanFlute feature;
+- sparse, beat-aligned PingBell accents;
+- deliberate low-pass-filter transitions;
+- a composed final flourish and rallentando;
+- a definite ending with no fade and no compositional loop.
 
-- jaunty, cheerful, and suitable for a game title or attract screen;
-- led by a convincingly voiced piano rather than a monophonic tracker lead;
-- unmistakably early-1990s tracker music in construction and channel economy;
-- contrasted by a filtered, haunting woodwind section;
-- informed by the spirit of Tim Wright and David Whittaker without imitating a specific piece;
-- allowed to exceed the original 85–105 second target where musical flow requires it.
+The finished track is jaunty, cheerful, and suitable for a game title or attract screen, with the PanFlute episode supplying the intended haunting contrast.
+
+### Final Build Metrics
+
+| Metric | Final value | Status |
+|---|---:|---|
+| Runtime | `02:26` / 146 seconds | Accepted |
+| File size | `59.07 kB` | Accepted |
+| Pattern count | `10` hex / 16 patterns | Complete |
+| Order length | `16` hex / 22 positions | Complete |
+| Final order position | `15` hex | Locked |
+| Final pattern | `0f` | Locked |
+| Full-build audition | Multiple sound systems | Passed |
+
+The original 85-105 second runtime preference and optional sub-40 kB bonus were soft targets. The final build exceeds both, with the accepted priorities remaining musical flow, convincing piano writing, ProTracker compatibility, and the deliberate coda.
 
 ### Core Compatibility Rules
 
@@ -86,7 +111,6 @@ No ping-pong loops
 Pattern reuse preferred
 Composition must have a definite ending
 No fade-out coda
-Exact final runtime is secondary to musical flow
 ```
 
 ### Pattern Notation Rules
@@ -97,46 +121,48 @@ Exact final runtime is secondary to musical flow
 - No note: `---`
 - No instrument: `--`
 - No effect: `---`
-- Actual instrument IDs and effect parameters remain hexadecimal.
+- Instrument IDs and effect parameters remain hexadecimal.
 - Each pattern uses this Markdown-compatible form:
 
 ```text
 | RR | NNN II EEE | NNN II EEE | NNN II EEE | NNN II EEE |
 ```
 
-### Locked Title & Tempo
+### Locked Title, Tempo, and Ending
 
 - **Title:** Clockwork Picnic
 - **Speed:** `06`
-- **BPM:** `84` hex / 132 decimal
+- **Baseline BPM:** `84` hex / 132 decimal
 - **Final rallentando:** `F78`, `F70`, `F68`
+- **Final chord:** rolled C major at Pattern `0f`, row `56`
+- **Ending:** natural RingPiano decay; no jump, restart, or fade
 
 The title remains the thematic seed:
 
 - **clockwork** supplies interlocking figures, repeated pattern blocks, filter-state mechanics, and precise accents;
-- **picnic** supplies warmth, cheerfulness, melodic openness, and a deliberately playful piano character.
+- **picnic** supplies warmth, cheerfulness, melodic openness, and playful piano writing.
 
 ### Approved Instrument Set
 
-All eight samples have been auditioned and passed.
+All eight samples were auditioned and passed.
 
 | ID | Sample | Role | Volume | Finetune | Loop |
 |---:|---|---|---:|---:|---|
 | `01` | `ST-01/RingPiano` | Principal piano voices | `10` | `0` | No |
 | `02` | `ST-01/PanFlute` | Two-pattern woodwind solo | `10` | `e` | No |
 | `03` | `ST-01/SoftBass` | Selective bass support | `40` | `f` | No |
-| `04` | `ST-01/BassDrum3` | Kick | `28` | — | No |
-| `05` | `ST-01/Snare1` | Snare | `2c` | — | No |
-| `06` | `ST-01/CloseHiHat` | Closed hi-hat | `40` | — | No |
+| `04` | `ST-01/BassDrum3` | Kick | `28` | - | No |
+| `05` | `ST-01/Snare1` | Snare | `2c` | - | No |
+| `06` | `ST-01/CloseHiHat` | Closed hi-hat | `40` | - | No |
 | `07` | `ST-01/Strings7` | Sustained harmonic bed | `20` | `2` | Yes |
-| `08` | `ST-01/PingBells` | Beat-aligned metallic accents | `38` | — | No |
+| `08` | `ST-01/PingBells` | Beat-aligned metallic accents | `38` | - | No |
 
 #### Finetune Notes
 
-- `RingPiano`: base `0`; `+1` remains a by-ear alternative.
-- `PanFlute`: base `e` (`-2`); `d` (`-3`) remains a by-ear alternative.
-- `SoftBass`: `f` (`-1`).
-- `Strings7`: base `2`; values `3`–`4` remain by-ear alternatives.
+- `RingPiano`: accepted at `0`; `+1` remains a historical/by-ear alternative, not the final setting.
+- `PanFlute`: accepted at `e` (`-2`); `d` (`-3`) remains an alternative, not the final setting.
+- `SoftBass`: accepted at `f` (`-1`).
+- `Strings7`: accepted at `2`; values `3`-`4` remain alternatives, not final settings.
 
 #### Strings7 Forward Loop
 
@@ -148,7 +174,7 @@ type: forward
 
 ### Accepted Channel Architecture
 
-A tracker channel represents one voice, not one entire hand.
+A tracker channel represents one voice, not an entire pianist's hand.
 
 #### Piano-led sections
 
@@ -159,7 +185,7 @@ A tracker channel represents one voice, not one entire hand.
 | CH3 | Consolidated percussion; temporarily becomes another RingPiano voice at important cadences |
 | CH4 | RingPiano lowest voice / bass anchor |
 
-This supports three- and four-note piano voicings, connected inner lines, broken-chord implications, rolled cadences, and a more plausible human performance.
+This architecture supports three- and four-note piano voicings, connected inner lines, broken-chord implications, rolled cadences, and a plausible human performance.
 
 #### PanFlute section
 
@@ -182,39 +208,72 @@ This supports three- and four-note piano voicings, connected inner lines, broken
 | `F70` | Set tempo to 112 BPM |
 | `F68` | Set tempo to 104 BPM |
 
-`ED1` and `ED2` are used sparingly to roll selected piano chords upward. They are not a constant humanization effect.
+`ED1` and `ED2` are used sparingly to roll selected piano chords upward. They are not a constant humanization device.
 
-### Structural Arc and Accepted Pattern Roles
+### Final Pattern Roles
 
 | Pattern | Role | Status |
 |---|---|---|
 | `00` | Winding the Clock | Passed |
-| `01–04` | Main piano theme | Passed |
-| `05–06` | Clockwork Games | Passed |
+| `01`-`04` | Main piano theme | Passed |
+| `05`-`06` | Clockwork Games | Passed |
 | `07` | Transition into the Strange Little Wood | Passed |
-| `08–09` | PanFlute question and answer | Passed |
+| `08`-`09` | PanFlute question and answer | Passed |
 | `0a` | Transition back to the picnic | Passed |
-| `0b–0c` | Richer piano reprise | Passed |
+| `0b`-`0c` | Richer piano reprise | Passed |
 | `0d` | Reprise lift | Passed |
 | `0e` | Coda setup / mechanism winds down | Passed |
 | `0f` | Final flourish and rallentando | Passed |
 
+### Final Order List
+
+```text
+00, 01, 02, 03, 04, 01, 02, 05, 06, 03, 04,
+07, 08, 09, 0a, 0b, 0c, 05, 06, 0d, 0e, 0f
+```
+
+| Order position | Pattern | Function |
+|---:|---:|---|
+| `00` | `00` | Winding the Clock |
+| `01` | `01` | Main theme A |
+| `02` | `02` | Main theme B |
+| `03` | `03` | Main development A |
+| `04` | `04` | Main development B |
+| `05` | `01` | Brighter core-theme restatement |
+| `06` | `02` | Brighter core-theme answer |
+| `07` | `05` | Clockwork Games A |
+| `08` | `06` | Clockwork Games B |
+| `09` | `03` | Development recall A |
+| `0a` | `04` | Development recall B |
+| `0b` | `07` | Transition into the woodwind section |
+| `0c` | `08` | PanFlute question |
+| `0d` | `09` | PanFlute answer |
+| `0e` | `0a` | Transition back to piano |
+| `0f` | `0b` | Piano reprise A |
+| `10` | `0c` | Piano reprise B |
+| `11` | `05` | Clockwork Games return A |
+| `12` | `06` | Clockwork Games return B |
+| `13` | `0d` | Reprise lift |
+| `14` | `0e` | Coda setup |
+| `15` | `0f` | Final flourish and ending |
+
 ### Filter-State Architecture
 
 ```text
-00: filter on with E00
-01–02: filter remains on
-03: filter off with E01
-04–06: filter remains off
-07: filter on at row 32 with E00
-08–09: filter remains on
-0a: filter off at row 32 with E01
-0b–0d: filter remains off
-0e: filter on at row 32 with E00
-0f: filter off at row 00 with E01
+Order 00 / Pattern 00: filter on with E00
+Patterns 01-02: filter remains on
+Pattern 03: filter off with E01
+Patterns 04, 01, 02, 05, 06: filter remains off
+Repeated Pattern 03: E01 safely reasserts filter off
+Pattern 07, row 32: filter on with E00
+Patterns 08-09: filter remains on
+Pattern 0a, row 32: filter off with E01
+Patterns 0b-0d: filter remains off
+Pattern 0e, row 32: filter on with E00
+Pattern 0f, row 00: filter off with E01
 ```
 
-Any final order list must preserve sensible entry points into this state machine. Repeated `01–02` after `03` will intentionally sound brighter because the filter is already off.
+The repeated `01`-`02` pair is intentionally brighter on its second appearance because the filter has already been opened by Pattern `03`.
 
 ---
 
@@ -225,107 +284,129 @@ Any final order list must preserve sensible entry points into this state machine
 ```text
 Clockwork Picnic
 |
-+-- Format / Compatibility
-|   +-- ProTracker 2
++-- Format / Compatibility                         [COMPLETE]
+|   +-- ProTracker 2 target
 |   +-- 4 channels
 |   +-- 64-row patterns
 |   +-- decimal row labels in compiler input
-|   +-- C-3..B-5 global note range
+|   +-- C-3..B-5 note range
 |   +-- PT-compatible effects only
 |   +-- forward loops only
 |
-+-- Source Samples
-|   +-- ST-01 archive
-|   |   +-- RingPiano
-|   |   +-- PanFlute
-|   |   +-- SoftBass
-|   |   +-- BassDrum3
-|   |   +-- Snare1
-|   |   +-- CloseHiHat
-|   |   +-- Strings7
-|   |   +-- PingBells
-|   |
-|   +-- ST-02 archive
-|       +-- retained as source material
-|       +-- no selected instruments
++-- Source Samples                                 [COMPLETE]
+|   +-- ST-01/RingPiano
+|   +-- ST-01/PanFlute
+|   +-- ST-01/SoftBass
+|   +-- ST-01/BassDrum3
+|   +-- ST-01/Snare1
+|   +-- ST-01/CloseHiHat
+|   +-- ST-01/Strings7
+|   +-- ST-01/PingBells
 |
-+-- Auditioned Instrument State
-|   +-- all 8 sample identities passed
-|   +-- volumes locked
-|   +-- finetunes locked
-|   +-- Strings7 forward loop locked
-|
-+-- Accepted Musical Architecture
++-- Musical Architecture                           [COMPLETE]
 |   +-- three/four-voice piano model
 |   +-- consolidated percussion
 |   +-- beat-aligned bells
-|   +-- filtered woodwind section
-|   +-- final rallentando
+|   +-- filtered PanFlute episode
+|   +-- final rallentando and coda
 |
-+-- Accepted Patterns
-|   +-- 00 intro
-|   +-- 01-04 main theme
-|   +-- 05-06 games
-|   +-- 07 transition
-|   +-- 08-09 solo
-|   +-- 0a return transition
-|   +-- 0b-0c reprise
-|   +-- 0d lift
-|   +-- 0e-0f coda
++-- Pattern Set 00-0f                              [COMPLETE]
+|   +-- all individual auditions passed
+|   +-- all paired/sectional auditions passed
 |
-+-- Remaining Assembly
-|   +-- final order list          [NEXT]
-|   +-- full MOD compilation      [NEXT]
-|   +-- whole-track audition      [NEXT]
-|   +-- runtime / size / PT2 QA   [NEXT]
++-- Final Assembly                                 [COMPLETE]
+|   +-- 22-position order list locked
+|   +-- full MOD compiled
+|   +-- full composition auditioned
+|   +-- multiple sound systems passed
+|   +-- runtime confirmed: 146 seconds
+|   +-- file size confirmed: 59.07 kB
 |
-+-- Testing
-    +-- PikaOS
-    +-- MilkyTracker
-    +-- custom MOD compiler
++-- Archival / Release                             [OPTIONAL]
+    +-- checksums
+    +-- release tag
+    +-- redundant backups
 ```
+
+No production dependency remains unresolved.
 
 ### Version Log
 
-#### Current Consolidated Bootstrap
+#### Final Consolidated Bootstrap
 
-- Title locked as **Clockwork Picnic**.
-- Baseline speed and tempo locked at `06` / `84`.
+- Project title locked as **Clockwork Picnic**.
 - Eight-sample ST-01 instrument set auditioned and accepted.
-- Instrument volumes, finetunes, and Strings7 loop settings accepted.
-- Piano architecture revised from one channel per hand to three/four independent piano voices.
-- Compiler notation locked to decimal row numbers with omitted empty rows.
-- `E00`, `E01`, `ED1`, `ED2`, and final `Fxx` effects accepted by audition.
-- PingBell timing corrected to the established four-row pulse.
-- Patterns `00`–`0f` composed and auditioned.
-- Every pattern and every designed transition block has passed.
-- Final order list remains the only outstanding musical assembly decision.
-
-Superseded sample choices, rejected pattern drafts, and abandoned channel architectures are intentionally omitted.
+- Volumes, finetunes, and the Strings7 forward loop locked.
+- Three/four-voice piano architecture locked.
+- Decimal-row compiler notation locked.
+- Patterns `00`-`0f` composed and auditioned.
+- Final order list locked at `16` hex entries.
+- Full module compiled successfully.
+- Complete composition auditioned successfully on multiple sound systems.
+- Exact runtime confirmed as `02:26`.
+- Final file size confirmed as `59.07 kB`.
+- Project status set to **complete**.
 
 ---
 
 ## 4. Golden Code Blocks
 
-### Project Metadata
+### Final Project Metadata
 
 ```yaml
 project:
   title: Clockwork Picnic
-  status: patterns-complete-order-pending
+  status: complete
   tracker: MilkyTracker
   platform: Linux / PikaOS
   format: ProTracker MOD
-  compatibility: ProTracker 2
+  compatibility_target: ProTracker 2
   channels: 4
   rows_per_pattern: 64
   row_number_base: decimal
   omit_empty_rows: true
   speed: 0x06
-  bpm: 0x84
+  baseline_bpm: 0x84
+  pattern_count: 0x10
+  highest_pattern: 0x0f
+  order_length: 0x16
+  final_order_position: 0x15
+  final_pattern: 0x0f
+  runtime_seconds: 146
+  runtime_display: "02:26"
+  file_size: "59.07 kB"
   looping_composition: false
   ending: deliberate-coda
-  highest_pattern: 0x0f
+  full_build_compiled: true
+  multi_system_audition: passed
+```
+
+### Final Order List
+
+```yaml
+order:
+  - 0x00
+  - 0x01
+  - 0x02
+  - 0x03
+  - 0x04
+  - 0x01
+  - 0x02
+  - 0x05
+  - 0x06
+  - 0x03
+  - 0x04
+  - 0x07
+  - 0x08
+  - 0x09
+  - 0x0a
+  - 0x0b
+  - 0x0c
+  - 0x05
+  - 0x06
+  - 0x0d
+  - 0x0e
+  - 0x0f
 ```
 
 ### Approved Instruments
@@ -336,13 +417,13 @@ instruments:
     source: st01
     name: ST-01/RingPiano
     volume: 0x10
-    finetune: 0x0  # 0 or +1
+    finetune: 0x0
 
   - id: 2
     source: st01
     name: ST-01/PanFlute
     volume: 0x10
-    finetune: 0xe  # -2 or -3
+    finetune: 0xe
 
   - id: 3
     source: st01
@@ -369,7 +450,7 @@ instruments:
     source: st01
     name: ST-01/Strings7
     volume: 0x20
-    finetune: 0x2  # +2 to +4
+    finetune: 0x2
     start: 0x00f0
     length: 0x25bc
     loop_type: forward
@@ -728,34 +809,28 @@ instruments:
 - [x] Beat-aligned PingBell timing.
 - [x] Filter-on and filter-off transitions.
 - [x] Rolled piano voicings using `ED1` and `ED2`.
-- [x] Main piano theme, Patterns `01–04`.
-- [x] Clockwork Games, Patterns `05–06`.
-- [x] Transition into the woodwind section, Pattern `07`.
-- [x] Two-pattern PanFlute solo, Patterns `08–09`.
-- [x] Transition back, Pattern `0a`.
-- [x] Piano reprise, Patterns `0b–0c`.
-- [x] Reprise lift, Pattern `0d`.
-- [x] Coda setup, Pattern `0e`.
-- [x] Final flourish and rallentando, Pattern `0f`.
-- [x] All individual pattern auditions.
-- [x] All requested paired and sectional auditions.
-- [x] Definite non-fade ending at pattern level.
+- [x] Patterns `00`-`0f` individually auditioned.
+- [x] Pattern pairs and structural sections auditioned.
+- [x] Final 22-position order list compiled.
+- [x] Repeated-pattern transitions passed in context.
+- [x] PanFlute entry and return transitions passed in context.
+- [x] Final filter-state sequence passed in context.
+- [x] Final rallentando passed.
+- [x] Definite non-fade ending passed.
+- [x] Full composition auditioned from beginning to end.
+- [x] Playback passed on multiple sound systems.
+- [x] Exact runtime confirmed as `02:26`.
+- [x] Final file size confirmed as `59.07 kB`.
 
-### Not Yet Tested
+### Validation Boundary
 
-- [ ] Final order list.
-- [ ] Complete order-list audition from beginning to end.
-- [ ] Full compiled `.mod`.
-- [ ] Exact final runtime.
-- [ ] Final file size.
-- [ ] Full ProTracker 2 compatibility pass on the assembled module.
-- [ ] Playback-stop behavior after the final order entry.
+No separate original ProTracker 2 hardware or original ProTracker 2 executable validation is recorded in this bootstrap. The module was designed within the stated PT2 constraints, compiled successfully, and passed the reported multi-system playback auditions.
 
-### Current Status
+### Final Status
 
-**Pattern-composition stage: PASSING.**
+**COMPLETE - PASSING**
 
-All patterns `00`–`0f` are authoritative and audition-approved. The project is ready for final order-list assembly.
+The final build is authoritative. No musical or technical work remains outstanding within the accepted project scope.
 
 ---
 
@@ -764,5 +839,5 @@ All patterns `00`–`0f` are authoritative and audition-approved. The project is
 - **Testing OS:** PikaOS
 - **Testing tracker:** MilkyTracker
 - **Pattern entry:** custom Markdown-compatible pattern compiler
-- **Build path:** accepted pattern tables compile into the final `.mod`
-
+- **Build path:** accepted pattern tables compiled into the final `.mod`
+- **Final playback validation:** multiple sound systems
